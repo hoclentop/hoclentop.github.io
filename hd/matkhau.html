@@ -10,16 +10,14 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/inc/all.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="all.css">
+
 
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
 
 
-	<script>hljs.highlightAll();</script>
 	
 </head>
 <body>
@@ -32,7 +30,9 @@
 					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
 					<div class="card-body window-body content">
 
-						<p>Ý tưởng</p>
+						<p>Vì KQ là số lớn nhất nên ưu tiên chữ số đầu tiên là 9 (nếu s≥9), khi đó, phần còn lại là số lớn nhất có (n-1) chữ số và có tổng các chữ số là (s-9).</p>
+
+						<p>Nếu s&lt;9 thì số đó là s00...0 (chữ số đầu là s còn lại là các số 0).</p>
 
 					</div>
 				</div>
@@ -42,7 +42,15 @@
 					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
 					<div class="card-body window-body content">
 
-						<p>HDG</p>      
+						<pre>
++ Với mỗi i chạy từ 1 đến n:
+    + Nếu s>=9 thì
+        + Viết số 9;
+        + s = s-9;
+    + ngược lại thì:
+        + viết số s;
+        + s = 0;
+						</pre>      
 
 					</div>
 				</div>
@@ -66,7 +74,31 @@
 					
 					
 				<pre><code class="language-cpp">
-				Mã nguồn
+//hoclen.top
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    int n, s;
+    cin &gt;&gt; n &gt;&gt; s;
+    if (n*9 &lt; s)
+        cout &lt;&lt; -1;
+    else
+        for (int i = 1; i&lt;=n; i++)
+        {
+            if (s &gt;= 9)
+            {
+                cout &lt;&lt; 9;
+                s = s - 9;
+            }
+            else
+            {
+                cout &lt;&lt; s;
+                s = 0;
+            }
+        }
+    return 0;
+}
 				</code></pre>
 					
 				</div>
