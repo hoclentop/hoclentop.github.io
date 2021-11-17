@@ -209,9 +209,9 @@ body { background-color: #cccccc; font-size: 16px; }
 
 .form-control { border-radius: 0; }
 
-pre code { font-family: 'Ubuntu Mono', monospace; font-size: 16px; overflow: scroll; word-wrap: normal; overflow-wrap: normal; white-space: pre; }
+pre code { font-family: 'Courier New','Ubuntu Mono', monospace; font-size: 16px; overflow: scroll; word-wrap: normal; overflow-wrap: normal; white-space: pre; color:white;}
 
-pre { border-radius: 0; border: 1px solid #ccc; }
+pre { border-radius: 0; }
 
 img { max-width: 100%; max-height: 100%; }
 
