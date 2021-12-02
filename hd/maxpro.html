@@ -70,7 +70,7 @@
                   <pre> Hàm tichmod(a,b,m) để tính a*b mod m
 + d=0;
 + Trong khi b &gt; 1 thì:
-   + d = (d + a) mod m;
+   + nếu b lẻ thì d = (d + a) mod m;
    + a = a * 2 mod m;
    + b = b / 2;
 + Trả về (a+d) mod m;
