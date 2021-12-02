@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn thuật toán - hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="all.css">
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+
+
+	
+</head>
+<body>
+	<marquee>H O C L E N . T O P</marquee>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="ytuong">
+					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
+					<div class="card-body window-body content">
+
+						<p>Khi mua M quyển, KH trả số tiền là `3000.M`, và được `M+1` quyển.</p>
+						<p>Đây là cách mua có lợi nhất. Vì vậy, KH nên mua từng nhóm (M+1) quyển như trên.</p>
+						<p>Số nhóm (M+1) quyển mua được nhiều nhất là k = N div (M+1) ⇒ số tiền = (3000*M)*k.</p>
+						<p>Số quyển lẻ (không đủ M+1) là le = N - k*(M+1) hoặc le = N mod (M+1)⇒ số tiền = 3000*le.</p>
+                  
+                  
+
+					</div>
+				</div>
+
+
+				<div class="card window" id="thuattoan">
+					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
+					<div class="card-body window-body content">
+
+						<pre>
++ Nhập N, M;
++ k = N div (M+1);
++ le = N mod (M+1);
++ tien = 3000*M*k + 3000*le;
++ Xuất tien;
+						</pre>  
+
+                                    
+
+					</div>
+				</div>
+
+					  
+
+					  
+						
+				<div class="card window" id="binhluan">
+					<div class="card-header window-header"><span class="title">Ghi chú - Bàn luận</span></div>
+					<div class="card-body window-body content">
+                  <p>Cách suy luận khác:</p>
+                  <p>Cứ mua (M+1) quyển KH được giảm tiền của 1 quyển.</p>
+                  <p>Vậy mua N quyển KH được giảm tiền của p = N div (M+1) quyển.</p>
+                  <p>⇒ Số quyển KH phải trả tiền là `N-p` quyển.</p>
+                  <pre>
++ Nhập N, M;
++ p = N div (M+1);
++ tien = 3000*(N-p);
++ Xuất tien;
+						</pre>
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="chuongtrinh">
+				<div class="card-header window-header"><span class="title">Chương trình</span></div>
+					
+					
+				<pre><code class="language-cpp">
+//hoclen.top
+
+				</code></pre>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2021 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
