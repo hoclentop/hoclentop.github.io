@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn thuật toán - hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="all.css">
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+
+
+	
+</head>
+<body>
+	<marquee>H O C L E N . T O P</marquee>
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img src="header.png"/></a>      </div>
+		<div class="row">
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="ytuong">
+					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
+					<div class="card-body window-body content">
+
+						<h6>Kiến thức về phân số (xét tử và mẫu đều là số dương): </h6>
+
+						<p>1) `a &lt; b <=> a/b &lt; 1`</p>
+						<p>2) `a &lt; b <=> a/c &lt; b/c`</p>
+						<p>3) `a/b &lt; c/d <=> a/b - c/d &lt; 0 <=> (ad-bc)/(bd) &lt; 0 <=> ad-bc &lt; 0 <=> ad &lt; bc `</p>
+						<p>* Lưu ý trong trường hợp tổng quát:</p>
+						<p>`a/b &lt; c/d <=> (ad-bc)bd &lt; 0`</p>
+						<h6>Ý tưởng: </h6>
+                  <p>Sắp xếp dãy a tăng dần thì phân số a[i]/a[i+1] là lớn nhất trong các phân số có mẫu là a[i+1].</p>
+
+					</div>
+				</div>
+
+
+				<div class="card window" id="thuattoan">
+					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
+					<div class="card-body window-body content">
+
+						<pre>
++ Nhập a, b, c, M;
++ Nếu a &gt; b thì hoán đổi a và b;
++ Nếu b &gt; c thì hoán đổi b và c;
++ Nếu a &gt; b thì hoán đổi a và b;
++ Nếu b &lt; 0 thì t = a.b mod M;
++ Ngược lại, t = b.c mod M;
++ Xuất t;
+						</pre>      
+
+					</div>
+				</div>
+
+					  
+
+					  
+						
+				<div class="card window" id="binhluan">
+					<div class="card-header window-header"><span class="title">Ghi chú - Bàn luận</span></div>
+					<div class="card-body window-body content">
+                  <p>Trường hợp a, b lớn thì việc tính a * b có thể bị tràn nên có thể dùng cách nhân 2 số lớn như sau:</p>
+                  <p>Nếu b chẵn thì a*b = (a*2) * (b/2)</p>
+                  <p>Nếu b lẻ thì a*b = (a*2) * (b/2) + a</p>
+                  <pre> Hàm tichmod(a,b,m) để tính a*b mod m
++ d=0;
++ Trong khi b &gt; 1 thì:
+   + nếu b lẻ thì d = (d + a) mod m;
+   + a = a * 2 mod m;
+   + b = b / 2;
++ Trả về (a+d) mod m;
+                  </pre>
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="chuongtrinh">
+				<div class="card-header window-header"><span class="title">Chương trình</span></div>
+					
+					
+				<pre><code class="language-cpp">
+//hoclen.top
+
+				</code></pre>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2021 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
