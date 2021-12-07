@@ -62,7 +62,23 @@
 					<div class="card-body window-body content">
 
 						<pre>
-
++ Nhập n;
++ Nếu n &lt; 50000 thì thông báo không thực hiện được và kết thúc
++ s500=min(n div 500000, 1000);
++ n = n - s500 * 500000;
++ s200=min(n div 200000, 1000);
++ n = n - s200 * 200000;
++ s100=min(n div 100000, 1000);
++ n = n - s100 * 100000;
++ s50=min(n div 50000, 1000);
++ n = n - s50 * 50000;
++ s20=min(n div 20000, 1000);
++ n = n - s20 * 20000;
++ s10=min(n div 10000, 1000);
++ n = n - s10 * 10000;
++ Nếu n &gt; 0 thì thông báo không thực hiện được và kết thúc
++ Xuất s10+s20+s50+s100+s200+s500;
++ Xuất s10, s20, s50, s100, s200, s500;
 
 						</pre>      
 
