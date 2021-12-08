@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn thuật toán - hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="all.css">
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
+
+
+	
+</head>
+<body>
+	<marquee>H O C L E N . T O P</marquee>
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img src="header.png"/></a>      </div>
+		<div class="row">
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="ytuong">
+					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
+					<div class="card-body window-body content">
+
+						
+
+						
+						<p>Nhận xét:</p>
+						<p>+ Điểm 1 và n không phải là đỉnh đồi;</p>
+						<p>+ Điểm i là đỉnh đồi nếu: A[i]>A[i-1] và A[i]>A[i+1]</p>
+						<p>Ý tưởng:</p>
+						<p>+ •	Tìm các đỉnh đồi -> duyệt 2 bên để tìm chân đồi -> tính độ dài rồi so sánh;</p>
+						
+                  
+						
+						
+                  
+						
+
+					</div>
+				</div>
+
+
+				<div class="card window" id="thuattoan">
+					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
+					<div class="card-body window-body content">
+
+						<pre>
+• Nhập n, mảng A;
+• dai = 0;
+• Với mỗi i chạy từ 2 đến n-1:
+   o Nếu A[i]&gt;A[i-1] và A[i]&gt;A[i+1] thì
+       t=i-1;
+       Trong khi A[t]&lt;A[t+1] và t ≥ 1 thì giảm t;
+       p=i+1;
+       Trong khi A[p]&lt;A[p-1] và p ≤ n thì tăng p;
+       Nếu dai &lt; p-t-1 thì dai = p-t-1;
+• Viết dai
+
+
+						</pre>      
+
+					</div>
+				</div>
+
+					  
+
+					  
+						
+				<div class="card window" id="binhluan">
+					<div class="card-header window-header"><span class="title">Ghi chú thêm</span></div>
+					<div class="card-body window-body content">
+                  <p><a href="https://www.youtube.com/watch?v=4w-8up37I3E">Video</a></p>
+                  
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="chuongtrinh">
+				<div class="card-header window-header"><span class="title">Chương trình</span></div>
+					
+					
+				<pre><code class="language-cpp">
+//toi.hoclen.top
+Updating...
+
+				</code></pre>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2021 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
