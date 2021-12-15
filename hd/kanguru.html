@@ -15,17 +15,21 @@
 
 
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
 
-	  gtag('config', 'G-VK1E3F271W');
-	</script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
 
+     gtag('config', 'G-VK1E3F271W');
+   </script>
 	
 </head>
 <body>
@@ -42,16 +46,16 @@
 						
 
 						
-						<p>Nhận xét:</p>
+						<h5>Nhận xét:</h5>
 						<p>+ Vì số bước nhảy cần nhỏ nhất nên ưu tiên nhảy bước dài nhiều nhất.</p>
 						
-						<p>Phân tích:</p>
+						<h5>Phân tích:</h5>
 						<p>Gọi x là số bước nhảy dài, thì:</p>
 						<p>+ Quãng đường nhảy được là bx;</p>
 						<p>+ Quãng đường còn lại là q=n-bx, nhảy bằng bước ngắn;</p>
 						
-						<p>⇒ q phải chia hết cho a. Khi đó, số bước nhảy ngắn là q div a.</p>
-						<p>+ 0 ≤ x ≤ n div b;</p>
+						<p>⇒ q phải chia hết cho a. Khi đó, số bước nhảy ngắn là `q / a`.</p>
+						<p>+ 0 ≤ x ≤ `n / b`;</p>
                   
 						
 						
@@ -66,14 +70,16 @@
 					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
 					<div class="card-body window-body content">
 
-						<pre>
-+ Nhập n, a, b;
-+ Với mỗi x chạy lùi từ n div b về 0:
-   - q = n-bx;
-   - Nếu q chia hết cho a thì xuất x+q/a và kết thúc;
-+ Xuất -1   
+						<ul>
+                  <li>Nhập n, a, b;</li>
+                  <li>Với mỗi x chạy lùi từ n div b về 0:</li>
+                  <ul>
+                     <li>q = n-bx;</li>
+                     <li>Nếu `q \vdots a` thì xuất `x+q/a` và kết thúc;</li>
+                  </ul>
+                  <li>Xuất -1;</li>   
 
-						</pre>      
+						</ul>      
 
 					</div>
 				</div>
