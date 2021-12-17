@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn thuật toán - hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="all.css">
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+	
+</head>
+<body>
+	<marquee>H O C L E N . T O P</marquee>
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img src="header.png"/></a>      </div>
+		<div class="row">
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="ytuong">
+					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
+					<div class="card-body window-body content">
+
+						
+
+						
+						<h6>Tiền xử lí:</h6>
+						<p>Với mỗi đoạn kí tự giống nhau, ta chỉ để lại 1 kí tự, đồng thời thêm 1 mảng lưu số lượng kí tự đó.</p>
+						<p>VD s = "xyyxxyyxxxy"; thì chuyển thành s = "xyxyxy"; f[]={1,2,2,2,3,1};</p>
+						<h6>Nhận xét:</h6>
+						<p>Đoạn s[i..j] cho kết quả là YES nếu thoả mãn 1 trong các điều kiện sau:</p>
+						<p>1) i=j và f[i]≥2</p>
+						<p>2) s[i]=s[j] và s[i+1..j-1] cho kết quả YES;</p>
+						<p>3) tồn tại k = i..j-1 sao cho  s[i..k] và s[k+1..j] đều cho kết quả YES;</p>
+						<p>4) tồn tại k = i..j-1 sao cho  s[i..k] và s[k..j] đều cho kết quả YES;</p>
+						
+						
+
+					</div>
+				</div>
+
+
+				<div class="card window" id="thuattoan">
+					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
+					<div class="card-body window-body content">
+
+						<ul>
+                     <li>Trong khi còn dữ liệu</li>
+                     
+                     <ul>
+                        <li>Nhập xâu t;</li>
+                        <li>Tiền xử lí xâu t → thành xâu s và mảng f[];</li>
+                        <li>QHĐ kiểm tra xâu s → viết kết quả;</li>
+                     </ul>
+                     
+
+						</ul>      
+
+					</div>
+				</div>
+
+					  
+
+					  
+						
+				<div class="card window" id="binhluan">
+					<div class="card-header window-header"><span class="title">Ghi chú thêm</span></div>
+					<div class="card-body window-body content">
+                  <p></p>
+                  
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="chuongtrinh">
+				<div class="card-header window-header"><span class="title">Chương trình</span></div>
+					
+					
+				<pre><code class="language-cpp">
+//toi.hoclen.top
+#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+bool d[151][151];
+unsigned char s[151],f[151];
+int n;
+
+void check(string p)
+{
+    n=0;
+    int i,l,j;
+    s[0]=p[0];
+    f[0]=1;
+    for (i=1; i&lt;p.length(); i++)
+    {
+        if (p[i]==p[i-1]) f[n]++;
+        else
+        {
+            n++;
+            s[n]=p[i];
+            f[n]=1;
+        }
+    }
+    memset(d, false, sizeof d);
+    for (i=0; i&lt;=n; i++)
+    {
+        if (f[i]&gt;1)
+        {
+            d[i][i]=true;
+            if (f[i+1]&gt;1) d[i][i+1]=true;
+        }
+    }
+
+    for (l=2; l&lt;=n; l++)
+    {
+        for (i=0; i&lt;=n-l; i++)
+        {
+            j=i+l;
+            if (s[i]==s[j] && d[i+1][j-1]) d[i][j]=true;
+            else
+                for (int k=i; k&lt;j; k++)
+                    if (d[i][k] && (d[k+1][j]||d[k][j])) {
+                        d[i][j]=true;
+                        break;
+                    }
+        }
+    }
+    cout &lt;&lt; (d[0][n] ? "YES" : "NO")&lt;&lt;endl;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false); cin.tie(0);
+    string t;
+    freopen("dulieu.inp","r",stdin);
+    while (cin&gt;&gt;t) check(t);
+    return 0;
+}
+
+
+				</code></pre>
+				
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2021 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
