@@ -260,7 +260,10 @@ body { position: relative; min-height: 100%; padding-bottom: 3em; }
 .toc .toc-h3 { margin-left: 3em; }
 
 /*# sourceMappingURL=all.css.map */
-
+.gthieu {
+   font-size:2px;
+}
 #imgheader {
    display:none;
 }
+
