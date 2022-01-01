@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn đề - hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../inc/all.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src='../inc/all.js'></script>
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+	
+</head>
+<body>
+	
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img id="imgheader" src="../inc/header.png"/></a>      </div>
+      <div class="row"><marquee>H O C L E N . T O P</marquee></div>
+		<div class="row">
+			
+				
+					
+         <div class="card-body window-body content">
+            <h6>Đề bài</h6>
+            <p><a href="https://www.facebook.com/hoclentop/posts/416601686830143">Link 1</a></p>
+            
+            <h6>Bài 1 - Covid-19</h6>
+            <p>Dùng suy luận toán học để ra kết quả:</p>
+            <p>+ Tìm số nhỏ nhất: Nếu a người có b người bị ghi tên (không thực hiện tốt) ⇒ Số người thực hiện tốt là a-b. (Nếu a&lt;b thì lấy 0).</p>
+            <p>+ Tìm số lớn nhất: Tất cả người không bị ghi tên (là N-b)</p>
+            <p>Đáp án của bài toán là 2 giá trị max(a-b, 0) và N-b.</p>
+            
+            <h6>Bài 2 - Soạn văn bản</h6>
+            <p>Tách từng từ của 2 xâu, so sánh khớp của cặp từ tương ứng của 2 xâu.</p>
+            <p>Kiểm tra 2 từ x và y khớp nhau:</p>
+            <p>+ Chuyển mỗi từ thành từng đoạn kí tự liền nhau giống nhau.  VD từ "ngannhhh" chuyển thành: n(1)g(1)a(1)n(2)h(3). Dạng: kí tự (số lượng)</p>
+            <p>+ 2 từ x, y khớp nhau nếu thoả mãn 2 đk:</p>
+            <p> 1) Các kí tự tương ứng của 2 từ x, y là như nhau;</p>
+            <p> 2) Số lượng của mỗi kí tự y không lớn hơn SL kí tự tương ứng của x;</p>
+            <p>VD: Khớp: t(1)i(2)n(1) và t(1)i(1)n(1), t(1)i(3)n(1) và t(1)i(2)n(1),...</p>
+            <p>không Khớp: t(1)i(2)n(1) và t(1)i(1)m(1), t(1)i(3)n(1) và t(2)i(2)n(1),...</p>
+            
+            <h6>Bài 3 - Mua quà</h6>
+            <p>Kĩ thuật tham lam</p>
+            <p>+ Sắp xếp mảng a[] theo thứ tự giảm dần;</p>
+            <p>+ Lần lượt xét a[i]: nếu cho a[i] vào được một nhóm nào đó thì cho vào, ngược lại thì cho a[i] vào nhóm mới.</p>
+            
+            <h6>Bài 4 - Số đặc biệt</h6>
+            <p>Số đặc biệt phải là số chính phương.</p>
+            <p>Lần lượt duyệt x chạy từ `sqrt L` đến `sqrt R`: Tìm số ước của `x^2`, nếu đó là số nguyên tố thì tăng biến đếm.</p>
+            <p>Để ăn full test, cần thêm kiến thức liên quan đến số nguyên tố: phân tích số ra thừa số nguyên tố, số ước...</p>
+            
+            <h6>Bài 5 - Lại là mua quà</h6>
+            <p>Kĩ thuật quy hoạch động</p>
+            <p>Gọi F[i] là số tiền phải trả ít nhất để mua i món từ 1 đến i.</p>
+            <p>Đáp án của bài toán là F[n].</p>
+            <p>Cách tính F[i]:</p>
+            <p>+ F[i]=min(F[k-1]+sum(A[k..i])), k=i-8 → i</p>
+            <p>+ F[i]=min(F[i], F[i-10]+sum(A[i-9..i])-min(A[i-9..i])</p>
+            
+            <h6>Bổ sung</h6>
+            <p>Hướng dẫn chi tiết có trong khoá học: <a href="https://hoclen.top/home/lesson/bo-de-thi-hsg-thpt-cac-tinh-2021-2022/17">Bộ đề THPT 21-22</a></p>
+            <p>Bộ đề THPT 21-22 bao gồm:</p>
+            <ul>
+               <li>Bộ đề thi chọn HSG môn Tin học THPT các tỉnh năm học 2021-2022;</li>
+               <li>Hướng dẫn chi tiết từng đề, từng bài;</li>
+               <li>Có bổ sung các kiến thức toán, tin có liên quan đến bài toán;</li>
+               <li>Kèm một tài khoản để làm và nộp bài, được chấm tự động.</li>
+            </ul>
+            
+            
+         </div>
+				
+
+
+				
+			
+
+			
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2022 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
