@@ -1,21 +1,25 @@
+var ndung = "hoclen.top";
+var url="";
 $(document).ready(function(){
    setTimeout(addCredit,100);
-   setTimeout(hienAnh,30000);
+   setTimeout(hienAnh,50000);
+   url=$(location).attr("href");
 });
-var ndung = "hoclen.top";
+
 
 function hienAnh(){
-   $("#imgheader").show();
+   $("#imgheader").toggle();
+   setTimeout(hienAnh, 30000);
 }
 function addCredit() {
    $("p").each(function(){
-      if (parseInt(Math.random()*1000)%13==0) {
-         $(this).append(" <span class='gthieu'>//"+ndung+"</span>");
+      if (parseInt(Math.random()*1000)%11==0) {
+         $(this).append(" <span class='gthieu'>#"+url+"</span>");
       }
    });
    $("li").each(function(){
-      if (parseInt(Math.random()*1000)%13==0) {
-         $(this).append(" <span class='gthieu'>//"+ndung+"</span>");
+      if (parseInt(Math.random()*1000)%11==0) {
+         $(this).append(" <span class='gthieu'>#"+url+"</span>");
       }
    });
 }
