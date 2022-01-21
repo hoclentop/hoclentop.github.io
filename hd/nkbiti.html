@@ -66,6 +66,16 @@
 0 0 0 0 0 ... 1 0
                   </pre>
                   <p><img src="img/voi17b2.png" /></p>
+		<h5>Cách 2:</h5>
+		<p>Gọi F[n] là số dãy nhị phân độ dài n có không quá k bit 0 ở cuối: x..x0..0</p>
+		<p>Gọi b là số bit 0 cuối, thì:</p>
+		<p>Nếu b = 0 ⇔ bit cuối là 1: F[n]=F[n-1]</p>
+		<p>Nếu b = 1 ⇔ 2 bit cuối là 10: F[n]=F[n-2]</p>
+		<p>Nếu b = 2 ⇔ 3 bit cuối là 100: F[n]=F[n-3]</p>
+		<p>Nếu b = 3 ⇔ 4 bit cuối là 1000: F[n]=F[n-4]</p>
+		<p>...</p>
+		<p>Nếu b = k ⇔ k+1 bit cuối là 1 bit 1 + k bit 0: F[n]=F[n-k-1]</p>
+		<p>Vậy F[n]=F[n-1]+F[n-2]+...+F[n-k-1]</p>
 
 
 
