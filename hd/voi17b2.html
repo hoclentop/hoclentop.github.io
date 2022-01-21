@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn thuật toán | hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../inc/all.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src='../inc/all.js'></script>
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+	
+</head>
+<body>
+	<marquee>H O C L E N . T O P</marquee>
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img id="imgheader" src="../inc/header.png"/></a>      </div>
+		<div class="row">
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="ytuong">
+					<div class="card-header window-header"><span class="title">Phân tích - Ý tưởng</span></div>
+					<div class="card-body window-body content">
+
+						<p>Gọi D[i, j] là số lượng dãy nhị phân độ dài i với j bít 0 ở cuối. xx...xx00...0</p>
+                  <p>Khi j=0, dãy np có dạng x..1, trừ chữ số 1 cuối cùng ra, ở phía trước nó, có thể là 0,1,2,..,k số 0.</p>
+                  <p>Suy ra D[i,0] = D[i-1,0] + D[i-1,1] + D[i-1,2] + ... + D[i-1,k].</p>
+                  <p>Khi j>0, dãy np có dạng x...0, trừ số 0 cuối cùng ra, phần còn lại là dãy np độ dài i-1 và có j-1 bit 0 ở cuối.</p>
+                  <p>Suy ra D[i,j] = D[i-1,j-1].</p>
+                  <p>Hay là:</p>
+                  <p>D[i,0]  = 1.D[i-1,0] +1.D[i-1,1]+ 1.D[i-1,2] +..........................+1.D[i-1,k-1]+1.D[i-1,k]</p>
+                  <p>D[i,1] = 1.D[i-1,0]+0.D[i-1,1]+ 0.D[i-1,2]+........................+0.D[i-1,k-1]+0.D[i-1,k]</p>
+                  <p>D[i,2] = 0.D[i-1,0]+1.D[i-1,1]+ 0.D[i-1,2] +........................+0.D[i-1,k-1]+0.D[i-1,k]</p>
+                  <p>D[i,3] = 0.D[i-1,0]+0.D[i-1,1]+ 1.D[i-1,2] +........................+0.D[i-1,k-1]+0.D[i-1,k]</p>
+                  <p>....</p>
+                  <p>D[i,k] = 0.D[i-1,0]+0.D[i-1,1]+ 0.D[i-1,2]+.......................+1.D[i-1,k-1]+0.D[i-1,k]</p>
+                  <p>Ma trận k x k:</p>
+                  <pre>
+1 1 1 1 1 ... 1 1
+1 0 0 0 0 ... 0 0
+0 1 0 0 0 ... 0 0
+0 0 1 0 0 ... 0 0
+...
+0 0 0 0 0 ... 1 0
+                  </pre>
+                  <p><img src="img/voi17b2.png" /></p>
+
+
+
+
+
+
+
+
+						
+						
+						
+						
+
+					</div>
+				</div>
+
+
+				<div class="card window" id="thuattoan">
+					<div class="card-header window-header"><span class="title">Thuật toán</span></div>
+					<div class="card-body window-body content">
+
+						<ul>
+                     <li></li>
+                     
+                     <ul>
+                        
+                     </ul>
+                     
+
+						</ul>      
+
+					</div>
+				</div>
+
+					  
+
+					  
+						
+				<div class="card window" id="binhluan">
+					<div class="card-header window-header"><span class="title">Ghi chú thêm</span></div>
+					<div class="card-body window-body content">
+                  <p></p>
+                  
+					</div>
+				</div> 
+			</div>
+
+			<div class="col-md-6" style="padding-left:7px; padding-right:7px">
+				<div class="card window" id="chuongtrinh">
+				<div class="card-header window-header"><span class="title">Chương trình</span></div>
+					
+					
+				<pre><code class="language-cpp">
+//toi.hoclen.top
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#define MOD 666777
+using namespace std;
+ifstream f("nkbiti.inp");
+ofstream g("nkbiti.out");
+long long  a[43][43],mask[43][43],sol[43][43];
+int n,k;
+void Nhan_matran(long long  a[43][43],long long  b[43][43])
+{
+    long long c[43][43]={};
+    for(int i=1;i&lt;=k;i++)
+        for(int j=1;j&lt;=k;j++)
+        {
+            for(int q=1;q&lt;=k;q++)
+                c[i][j]=(c[i][j]+ (a[i][q]*b[q][j] ) %MOD ) %MOD;
+        }
+    for(int i=1;i&lt;=k;i++)
+        for(int j=1;j&lt;=k;j++)
+            a[i][j]=c[i][j];
+}
+void power( long long a[43][43],int n)// Tinh ma tran luy thua n
+{
+    long long aux[43][43]={};
+    for(int i=0;i&lt;=k;i++)
+        aux[i][i]=1;
+    while(n)
+    {
+        if(n%2)
+        Nhan_matran(aux,a);
+        Nhan_matran(a,a);
+        n/=2;
+    }
+  for(int i=1;i&lt;=k;i++)
+    for(int j=1;j&lt;=k;j++)
+        a[i][j]=aux[i][j];
+}
+int main()
+{
+    f&gt;&gt; n &gt;&gt; k;
+    long long  pw=1;
+    k++;
+    for(int i=1;i&lt;=k;i++)
+    {
+        a[i][1]=pw;
+        pw=(pw*2)%MOD;
+    }
+    for(int i=1;i&lt;=k;i++)
+    {
+        mask[k][i]=1;
+        mask[i][i+1]=1;
+    }
+    power(mask,n-k+1);
+    Nhan_matran(mask,a);
+    int sum=0;
+    sum=mask[k][1];
+    g &lt;&lt; sum % MOD;
+    return 0;
+}
+
+
+
+				</code></pre>
+				
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2021 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
