@@ -1,1 +1,58 @@
-Chào các bạn
+<html> 
+  <head> 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Code | hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../inc/all.css">
+    <script src='../inc/all.js'></script>
+    <style>
+    iframe[seamless] {
+    border: none;
+    width:100%;
+    height:90%;
+    font: "Courier New";
+    color:blue;
+}
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+    <script> 
+    $(document).ready(function(){
+      $.urlParam = function(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results) return results[1];
+		return  "";
+	}
+   var c=$.urlParam("c")+"";
+   $("#debug").html(c);
+   $("#manguon").attr("src",c);
+      //$("#DivContent").load(c); 
+    });
+    </script> 
+  </head> 
+
+  <body> 
+   <marquee>H O C L E N . T O P</marquee>
+   	<div class="container-fluid">
+      
+		<div class="row">
+      <iframe id="manguon" src="" seamless></iframe>
+
+
+</div>
+
+<div class="row"><a href="/"><img id="imgheader" src="../inc/header.png"/></a>      </div>
+</div>
+     
+  </body> 
+</html>
