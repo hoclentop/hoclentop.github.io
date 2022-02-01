@@ -1,1 +1,45 @@
-hoclen.top
+<html> 
+  <head> 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Bài tập | hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="../inc/all.css">
+   <script src='../inc/all.js'></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+    <script> 
+    $(document).ready(function(){
+      $.urlParam = function(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results) return results[1];
+		return  "";
+	}
+   var x=$.urlParam("i")+"";
+   
+   $("#hinhanh").attr("src",x);
+      
+    });
+    </script> 
+  </head> 
+
+  <body> 
+     
+     
+     <marquee>H O C L E N . T O P</marquee>
+
+	
+      <p>BÀI TẬP</p>
+		<p><img id="hinhanh" src=""/></p>
+<div class="row"><a href="/"><img id="imgheader" src="../inc/header.png"/></a>      </div>
+  </body> 
+</html>
