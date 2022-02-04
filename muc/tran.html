@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Tràn số | hoclen.top</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src='../inc/all.js'></script>
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
+
+   
+	
+</head>
+<body>
+	
+
+	<div class="container-fluid">
+		<div class="row">
+			
+				
+					
+         <div class="card-body window-body content">
+            <h6>Tràn số trong C++/Pascal</h6>
+            <p>Code sau cho kết quả sai do tràn số</p>
+            <pre>
+//NNLT Pascal
+var x:int64;
+    y:longint;
+begin
+    y:=1000000000;
+    <span class="maudo">x:=y+y+y;</span> //Dòng lệnh có vấn đề
+    write(x);
+end.
+</pre>
+hoặc
+<pre>
+//NNLT C++
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+   int y;
+   long long int x;
+   y=1000000000;
+   <span class="maudo">x=y+y+y;</span> //Dòng lệnh có vấn đề
+   cout&lt;&lt;x;
+   return 0;
+}
+            </pre>
+            
+            <h6>Lí do</h6>
+            <p>Biểu thức ở vế bên phải gồm các biến kiểu số nguyên 32 bit. Do đó, trình biên dịch cấp bộ nhớ 32bit để tính toán biểu thức này, dẫn đến kết quả bị tràn.</p>
+           
+            <h6>Khắc phục</h6>
+            <p>Biểu thức bên phải phải có ít nhất 1 biến kiểu số nguyên 64 bit hoặc ép kiểu 1 giá trị lên kiểu 64 bit.</p>
+            <p>Chẳng hạn:</p>
+           <pre>
+//NNLT Pascal
+var x:int64;
+    y:longint;
+begin
+    y:=1000000000;
+    x:=<span style="color:red;">int64(y)</span>+y+y; //Ép kiểu lên int64
+    write(x);
+end.
+</pre>
+hoặc
+<pre>
+//NNLT C++
+#include &lt;iostream&gt;
+using namespace std;
+int main(){
+   int y;
+   long long int x;
+   y=1000000000;
+   x=<span style="color:red;">0ll</span>+y+y+y; //Số 0 kiểu long long int
+   cout&lt;&lt;x;
+   return 0;
+}
+            </pre>
+            
+            
+            
+           
+            
+            
+         </div>
+				
+
+
+				
+			
+
+			
+		</div>
+	</div>
+
+
+
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2022 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
