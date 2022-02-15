@@ -30,7 +30,12 @@
      gtag('js', new Date());
      gtag('config', 'G-VK1E3F271W');
    </script>
-	
+<script> 
+    $(document).ready(function(){
+      var i = Math.floor(Math.random() * 8) + 1;
+      $("#quangcao").attr("src","../qc/qc"+i+".html");
+    });
+    </script> 
 </head>
 <body>
 	
@@ -81,7 +86,7 @@
 		</div>
 	</div>
 
-
+	<div><iframe height="300px" scrolling="no"  id="quangcao" src="../qc/qc1.html" seamless></iframe></div>
 
     <footer class="page-footer">
 		<div class="footer-copyright">
