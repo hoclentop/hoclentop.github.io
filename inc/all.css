@@ -266,4 +266,7 @@ body { position: relative; min-height: 100%; padding-bottom: 3em; }
 #imgheader {
    display:none;
 }
-
+iframe[seamless] {
+    border: none;
+    width:100%;
+}
