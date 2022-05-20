@@ -1,0 +1,47 @@
+<html> 
+  <head> 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>Hướng dẫn nôpq bài tập | hoclen.top </title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="inc/all.css">
+   <script src='inc/all.js'></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+    <script> 
+    $(document).ready(function(){
+      $.urlParam = function(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results) return results[1];
+		return  "";
+	}
+   var bai=$.urlParam("b")+"";
+   
+   $(".mabai").html(bai);
+      $("#linknop").attr("href","https://oj.vnoi.info/problem/"+bai+"/submit");
+      
+    });
+    </script> 
+  </head> 
+
+  <body> 
+     
+     
+     <marquee>H O C L E N . T O P</marquee>
+
+	
+    <p>HƯỚNG DẪN NỘP BÀI <span class="mabai"></span></p>
+    <p>1. Bạn đăng nhập và join vào <a target="_blank" href="https://oj.vnoi.info/organization/128-hoclentop">nhóm</a> </p>
+    <p>2. Nháy vào <a id="linknop" href="">Link nộp bài</a> </p>
+<div class="row"><a href="/"><img id="imgheader" src="inc/header.png"/></a>      </div>
+  </body> 
+</html>
