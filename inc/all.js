@@ -3,6 +3,7 @@ var url="";
 $(document).ready(function(){
    setTimeout(addCredit,100);
    setTimeout(hienAnh,50000);
+   setTimeout(hienQC,5000);
    url=$(location).attr("href");
 });
 
@@ -22,4 +23,12 @@ function addCredit() {
          $(this).append(" <span class='gthieu'>#"+url+"</span>");
       }
    });
+}
+function hienQC(){
+   if ($("#quangcao").length>0)
+   {
+      var i = Math.floor(Math.random() * 10000000)%9 + 1;
+      $("#quangcao").attr("src","../qc/qc"+i+".html");
+   }
+   setTimeout(hienQC,300000);
 }
