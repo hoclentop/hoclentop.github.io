@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Tran Huu Nam">
+	<title>HD đề thi vào 10 chuyên TP Đà Nẵng năm 2022-2023 | hoclen.top</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../inc/all.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src='../inc/all.js'></script>
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' defer>
+   MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+   });
+   </script>
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK1E3F271W"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-VK1E3F271W');
+   </script>
+	
+</head>
+<body>
+	
+
+	<div class="container-fluid">
+      <div class="row"><a href="/"><img id="imgheader" src="../inc/header.png"/></a>      </div>
+      <div class="row"><marquee>H O C L E N . T O P</marquee></div>
+		<div class="row">
+			
+				
+					
+         <div class="card-body window-body content">
+            <h6>Đề bài</h6>
+            <p><a href="https://www.facebook.com/groups/208411111246601/posts/392737066147337/">Link 1</a></p>
+            <p><a href="https://www.facebook.com/groups/208411111246601/posts/392737066147337/?comment_id=392900202797690">Link 2</a></p>
+            
+            <h6>Bài 1: Khoảng cách</h6>
+            <p>Tóm tắt: tính tổng các số có trong xâu.</p>
+            <p>Gọi t là tổng các số trong xâu, ban đầu t=0.</p>
+            <p>Gọi k là biến lưu từng số tách được trong xâu. Ban đầu k=0.</p>
+            <p>Với mỗi kí tự s[i]:</p>
+            <p>+ Nếu s[i] = 'D' thì t = t + k; và k=0;</p>
+            <p>+ Nếu s[i] ≠ 'D' thì k=k*10 + giá trị chữ số s[i];</p>
+			<h6>Bài 2: Bán dưa</h6>
+            <p>Cách chọn các viên đá như sau: Ưu tiên chọn viên đá nặng hơn trước, và không chọn 2 viên giống nhau (trừ khi bị bắt buộc).</p>
+            <p>Thuật toán: gồm 2 pha</p>
+            <p>Pha 1: Xét các viên đá từ nặng đến nhẹ, chọn mỗi loại 1 viên cho đủ N viên.</p>
+            <p>Pha 2: Nếu chưa đủ N viên thì chọn tiếp các viên nhẹ nhất cho đủ.</p>
+            <p>Dùng KT mảng đếm là thuận tiện nhất.</p>
+			<h6>Bài 3: Số chữ số</h6>
+            <p>Xét căn của các số dạng $10^k$:</p>
+            <p>+ Nếu k chẵn: k=2n thì $\sqrt{10^{2n}}=10^n$</p>
+            <p>+ Nếu k lẻ: k=2n+1 thì $\sqrt{10^{2n+1}}=10^n \sqrt{10}$</p>
+            <p>Ta có: M = $\sqrt{10}=3.16227766016837$</p>
+            <p>Các số chính phương có 1 chữ số: $1^2..3^2$</p>
+            <p>Các số chính phương có 2 chữ số: $4^2..9^2$</p>
+            <p>Các số chính phương có 3 chữ số: $10^2..31^2$</p>
+            <p>Các số chính phương có 4 chữ số: $32^2..99^2$</p>
+            <p>Các số chính phương có 5 chữ số: $100^2..316^2$</p>
+            <p>Các số chính phương có 6 chữ số: $317^2..999^2$</p>
+			<p>Các số chính phương có 7 chữ số: $1000^2..3162^2$</p>
+            <p>Các số chính phương có 8 chữ số: $3163^2..9999^2$</p>
+			<p>Các số chính phương có 9 chữ số: $10000^2..31622^2$</p>
+            <p>Các số chính phương có 10 chữ số: $31623^2..99999^2$</p>
+            <p>...</p>
+            <!--<p>Gọi P[i] là số nguyên lớn nhất mà bình phương của nó có i chữ số.</p>
+            <p>P=[3, 9, 31, 99, 316, 999, 3162, 9999, 31622, 99999,...]</p>
+            <p>Nếu i chẵn: P[i] là số gồm i-1 chữ số 9.</p>
+            <p>Nếu i lẻ: P[i] là phần nguyên của $M.10^{i-1}$.</p> -->
+			<p>Gọi Q[i] là số nguyên nhỏ nhất mà bình phương của nó có i chữ số.</p>
+            <p>Q=[1, 4, 10, 32, 100, 317, 1000, 3163, 10000, 31623, 100000,...]</p>
+            <p>Nếu i chẵn: Q[i] là phần nguyên của $M.10^{\frac{i}{2}-1}+1$.</p>
+            <p>Nếu i lẻ: Q[i] là  $10^{\frac{i-1}{2}}$.</p>
+            <p>Tìm t lớn nhất mà Q[t] ≤ k</p>
+            <p>Khi đó:</p>
+            <p>Số lượng số mà bp có t chữ số là: (k-Q[t]+1);</p>
+            <p>Số lượng số mà bp có i (i &lt; t) chữ số  là: (Q[i+1]-Q[i]);</p>
+            <p>Từ đó tính được số chữ số</p>
+            <p></p>
+            
+            <h6>Bổ sung</h6>
+            <p>Hướng dẫn chi tiết có trong khoá học: <a href="https://hoclen.top/home/lesson/bo-de-thi-hsg-thpt-cac-tinh-2021-2022/17">Bộ đề THCS 21-22</a></p>
+            <p>Bộ đề THCS 21-22 bao gồm:</p>
+            <ul>
+               <li>Bộ đề thi chọn HSG môn Tin học THCS các tỉnh năm học 2021-2022;</li>
+               <li>Hướng dẫn chi tiết từng đề, từng bài;</li>
+               <li>Có bổ sung các kiến thức toán, tin có liên quan đến bài toán;</li>
+               <li>Kèm một tài khoản để làm và nộp bài, được chấm tự động.</li>
+            </ul>
+            
+            
+         </div>
+				
+
+
+				
+			
+
+			
+		</div>
+	</div>
+
+
+   <div><iframe height="300px" scrolling="no"  id="quangcao" src="../qc/qc1.html" seamless></iframe></div>
+   
+    <footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+			  &copy; 2022 hoclen.top 
+			</div>
+		</div>
+	</footer>
+
+    
+</body>
+</html>
