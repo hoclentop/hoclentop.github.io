@@ -1,0 +1,33 @@
+<html>
+<head>
+	<script	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#giong").click(function(){
+				var s=parseInt($("#gsl").val());
+				var v=$("#ggi").val();
+				var txt="";
+				var stt = $("#stt").prop('checked');
+				//alert(stt);
+				for (i=1; i<=s; i++) txt +=i + "" + v;
+				$("#ketqua").html(txt);
+			});
+		});
+	</script>
+	<style>
+		#ketqua {
+			font-family:"Courier New", Arial;
+			word-wrap: break-word;
+			
+		}
+	</style>
+</head>
+<body>
+	<h3>SINH TEST - THNam</h3>
+	<p>Sinh số giống nhau: số lượng: <input id="gsl"> giá trị: <input id="ggi"></p>
+	<p><input id="stt" type="checkbox">Có gắn số thứ tự ----&gt; <button id="giong">Sinh</button></p>
+	
+	<div id="ketqua"></div>
+</body>
+
+</html>
