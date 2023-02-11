@@ -9,7 +9,7 @@
 				var txt="";
 				var stt = $("#stt").prop('checked');
 				//alert(stt);
-				for (i=1; i<=s; i++) txt +=i + "" + v;
+				for (i=1; i<=s; i++) txt +=(stt?i:"") + "" + v;
 				$("#ketqua").html(txt);
 			});
 		});
