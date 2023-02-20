@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+	<meta name="author" content="Tran Huu Nam">
+    <meta http-equiv="refresh" content="400">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+	<script>
+		var hoanthanh=true;
+		var txt="Tran Huu Nam";
+		var speed = 80;
+		function chay() {
+			
+			hoanthanh=false;
+			new TypeIt(".typing", {
+			  strings: txt,
+			  speed: speed,
+			  lifeLike: true,
+			  cursorChar: "█",
+			  afterComplete: function(go) {
+					go.destroy();
+					hoanthanh=true;
+					//go[1].cursor=false;
+			  }
+			}).go();
+			
+			setTimeout(kiemsoat,txt.length * speed);
+		}
+		function kiemsoat() {
+			if (hoanthanh==false) setTimeout(kiemsoat,1000);
+			else {
+				var t=document.getElementsByClassName("typing");
+				if (t.length==0) return;
+				txt=t[0].innerHTML;
+				t[0].innerHTML="";
+				chay();
+				t[0].classList.remove("typing");
+			}
+		}
+		function showfooter() {
+			document.getElementById("footer").style.display="block";
+		}
+		setTimeout(kiemsoat,3000);
+		setTimeout(showfooter,90000);
+	</script>
+	<link rel="stylesheet" href="../inc/kieu.css"/>
+  </head>
+  <body>
+    <div class="quanho">//Tran Huu Nam hoclen.top</div>
+    <div class="typing manguon">
+	
+<span class="sc9">#include &lt;iostream&gt;
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc5">namespace</span><span class="sc0"> </span><span class="sc11">std</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc16">long</span><span class="sc0"> </span><span class="sc16">long</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">,</span><span class="sc11">dem</span><span class="sc10">,</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc4">1000000</span><span class="sc10">],</span><span class="sc11">b</span><span class="sc10">[</span><span class="sc4">1000000</span><span class="sc10">],</span><span class="sc11">k</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">()</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"THUASONT.INP"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"r"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">stdin</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"THUASONT.OUT"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"w"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">stdout</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">cin</span><span class="sc0"> </span><span class="sc10">&gt;&gt;</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">2</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;=</span><span class="sc11">sqrt</span><span class="sc10">(</span><span class="sc11">n</span><span class="sc10">);</span><span class="sc11">i</span><span class="sc10">++){</span><span class="sc0"><span class="quanho">//Khóa học Luyện đề thi tỉnh go.hoclen.top/dehsg</span>
+        </span><span class="sc11">dem</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc5">while</span><span class="sc10">(</span><span class="sc11">n</span><span class="sc10">%</span><span class="sc11">i</span><span class="sc10">==</span><span class="sc4">0</span><span class="sc10">){</span><span class="sc0">
+            </span><span class="sc10">++</span><span class="sc11">dem</span><span class="sc10">;</span><span class="sc0">
+            </span><span class="sc11">n</span><span class="sc10">/=</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc10">}</span><span class="sc0">
+        </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">dem</span><span class="sc10">){</span><span class="sc0">
+            </span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">k</span><span class="sc10">]=</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+            </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">dem</span><span class="sc10">&gt;=</span><span class="sc4">1</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">[</span><span class="sc11">k</span><span class="sc10">]=</span><span class="sc11">dem</span><span class="sc10">;</span><span class="sc0">
+            </span><span class="sc11">k</span><span class="sc10">++;</span><span class="sc0">
+        </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">n</span><span class="sc10">&gt;</span><span class="sc4">1</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">k</span><span class="sc10">]=</span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc11">b</span><span class="sc10">[</span><span class="sc11">k</span><span class="sc10">]=</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc11">k</span><span class="sc10">++;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc11">cout</span><span class="sc0"> </span><span class="sc10">&lt;&lt;</span><span class="sc11">k</span><span class="sc10">-</span><span class="sc4">1</span><span class="sc10">&lt;&lt;</span><span class="sc11">endl</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;=</span><span class="sc11">k</span><span class="sc10">-</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">++){</span><span class="sc0"><span class="quanho">//GVHD Trần Hữu Nam</span>
+        </span><span class="sc11">cout</span><span class="sc0"> </span><span class="sc10">&lt;&lt;</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">]&lt;&lt;</span><span class="sc6">" "</span><span class="sc10">&lt;&lt;</span><span class="sc11">b</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">]&lt;&lt;</span><span class="sc11">endl</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc10">}</span>
+
+<span class="sc2">Hướng dẫn chi tiết thuật toán có trong: go.hoclen.top/dehsg
+</span>
+	</div>
+<div id="footer" style="display:none;margin-top:50px;"><img src="../inc/luyende.png"/></div>
+  </body>
+</html>
