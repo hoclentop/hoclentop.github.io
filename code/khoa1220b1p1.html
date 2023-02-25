@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+	<meta name="author" content="Tran Huu Nam">
+    <meta http-equiv="refresh" content="400">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="../inc/typing.js"></script>
+	<link rel="stylesheet" href="../inc/kieu.css"/>
+	<link rel="stylesheet" href="../inc/code-cpp.css"/>
+  </head>
+  <body>
+    <div class="quanho">//Tran Huu Nam hoclen.top</div>
+    <div class="typing manguon">
+<span class="sc9">var</span><span class="sc0"> </span><span class="sc1">N</span><span class="sc13">,</span><span class="sc1">S</span><span class="sc13">,</span><span class="sc1">i</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+     </span><span class="sc1">read</span><span class="sc13">(</span><span class="sc1">N</span><span class="sc13">,</span><span class="sc1">S</span><span class="sc13">);</span><span class="sc0">
+     </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">S</span><span class="sc13">&gt;</span><span class="sc7">9</span><span class="sc13">*</span><span class="sc1">N</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">begin</span><span class="sc0">
+        </span><span class="sc1">write</span><span class="sc13">(</span><span class="sc10">'-1'</span><span class="sc13">);</span><span class="sc0">
+        </span><span class="sc9">exit</span><span class="sc13">;</span><span class="sc0">
+        </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+     </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc13">(</span><span class="sc1">S</span><span class="sc13">=</span><span class="sc7">0</span><span class="sc13">)</span><span class="sc0"> </span><span class="sc9">and</span><span class="sc0"> </span><span class="sc13">(</span><span class="sc1">N</span><span class="sc13">&gt;</span><span class="sc7">1</span><span class="sc13">)</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">begin</span><span class="sc0">
+        </span><span class="sc1">write</span><span class="sc13">(</span><span class="sc10">'-1'</span><span class="sc13">);</span><span class="sc0">
+        </span><span class="sc9">exit</span><span class="sc13">;</span><span class="sc0">
+        </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+     </span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:=</span><span class="sc7">1</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">N</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+         </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">S</span><span class="sc13">&gt;=</span><span class="sc7">9</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">begin</span><span class="sc0">
+            </span><span class="sc1">write</span><span class="sc13">(</span><span class="sc10">'9'</span><span class="sc13">);</span><span class="sc0">
+            </span><span class="sc1">S</span><span class="sc13">:=</span><span class="sc1">S</span><span class="sc13">-</span><span class="sc7">9</span><span class="sc13">;</span><span class="sc0">
+            </span><span class="sc9">end</span><span class="sc0"> </span><span class="sc9">else</span><span class="sc0"> </span><span class="sc9">begin</span><span class="sc0">
+                </span><span class="sc1">write</span><span class="sc13">(</span><span class="sc1">S</span><span class="sc13">);</span><span class="sc0">
+                </span><span class="sc1">S</span><span class="sc13">:=</span><span class="sc7">0</span><span class="sc13">;</span><span class="sc0">
+                </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">.</span>
+
+<span class="sc2">Khóa học luyện đề thi HSG cấp tỉnh: go.hoclen.top/dehsg</span>
+	</div>
+<div id="footer" style="display:none;margin-top:50px;"><img src="../inc/luyende.png"/></div>
+  </body>
+</html>
