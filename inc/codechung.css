@@ -1,0 +1,82 @@
+/* Trinh bay chung*/
+
+.maudo {
+	color: red;
+}
+
+/* Format code Python */
+
+.code-py .sc0 {
+}
+.code-py .sc2 {
+	color: #FF0000;
+}
+.code-py .sc4 {
+	color: #808080;
+}
+.code-py .sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.code-py .sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.code-py .sc11 {
+}
+.code-py .sc14 {
+	font-weight: bold;
+	color: #880088;
+}
+
+/* Format code C++ */
+
+.code-cpp .sc0 {
+}
+.code-cpp .sc2 {
+	color: #008000;
+}
+.code-cpp .sc4 {
+	color: #FF8000;
+}
+.code-cpp .sc5 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.code-cpp .sc6 {
+	color: #808080;
+}
+.code-cpp .sc9 {
+	color: #804000;
+}
+.code-cpp .sc10 {
+	font-weight: bold;
+	color: #000080;
+}
+.code-cpp .sc11 {
+}
+.code-cpp .sc16 {
+	color: #8000FF;
+}
+
+/* Format code Pascal */
+
+.code-pas .sc0 {
+	color: #808080;
+}
+.code-pas .sc1 {
+}
+.code-pas .sc7 {
+	color: #FF8000;
+}
+.code-pas .sc9 {
+	font-weight: bold;
+	color: #0000FF;
+}
+.code-pas .sc10 {
+	color: #808080;
+}
+.code-pas .sc13 {
+	font-weight: bold;
+	color: #000080;
+}
