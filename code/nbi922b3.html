@@ -12,10 +12,85 @@
   <body>
     <div class="quanho">//Tran Huu Nam hoclen.top</div>
 	<div class="typing manguon code-cpp">
-Mã nguồn C++ đang được cập nhật...
+<span class="sc9">#include &lt;bits/stdc++.h&gt;
+#define ll long long
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc5">namespace</span><span class="sc0"> </span><span class="sc11">std</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc16">const</span><span class="sc0"> </span><span class="sc11">ll</span><span class="sc0"> </span><span class="sc11">N</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1e6</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc11">ll</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">N</span><span class="sc10">];</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">()</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc11">ios_base</span><span class="sc10">::</span><span class="sc11">sync_with_stdio</span><span class="sc10">(</span><span class="sc5">false</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">cin</span><span class="sc10">.</span><span class="sc11">tie</span><span class="sc10">(</span><span class="sc5">NULL</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">cout</span><span class="sc10">.</span><span class="sc11">tie</span><span class="sc10">(</span><span class="sc5">NULL</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"DAYCON.INP"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"r"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">stdin</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"DAYCON.OUT"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"w"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">stdout</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">cin</span><span class="sc0"> </span><span class="sc10">&gt;&gt;</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">ll</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">,</span><span class="sc11">d</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc10">,</span><span class="sc11">c</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">res</span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">INT_MIN</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc0"> </span><span class="sc10">&lt;=</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">++)</span><span class="sc0">
+  </span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">cin</span><span class="sc0"> </span><span class="sc10">&gt;&gt;</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">];</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">s</span><span class="sc10">&lt;</span><span class="sc4">0</span><span class="sc10">)</span><span class="sc0"> 
+    </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">s</span><span class="sc10">=</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">];</span><span class="sc0">
+      </span><span class="sc11">x</span><span class="sc10">=</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">+=</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">];</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">s</span><span class="sc10">&gt;</span><span class="sc11">res</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+      </span><span class="sc11">res</span><span class="sc10">=</span><span class="sc11">s</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">d</span><span class="sc10">=</span><span class="sc11">x</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">c</span><span class="sc10">=</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc11">cout</span><span class="sc10">&lt;&lt;</span><span class="sc11">res</span><span class="sc10">&lt;&lt;</span><span class="sc11">endl</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc11">ll</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc11">d</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;=</span><span class="sc11">c</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">++)</span><span class="sc0"> </span><span class="sc11">cout</span><span class="sc0"> </span><span class="sc10">&lt;&lt;</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">]</span><span class="sc0"> </span><span class="sc10">&lt;&lt;</span><span class="sc6">" "</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span>
 	</div>
 	<div class="typing manguon code-pas">
-Mã nguồn Pascal đang được cập nhật...
+<span class="sc9">var</span><span class="sc0"> </span><span class="sc1">n</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">a</span><span class="sc13">,</span><span class="sc1">pre</span><span class="sc13">:</span><span class="sc9">array</span><span class="sc0"> </span><span class="sc13">[</span><span class="sc7">0</span><span class="sc13">..</span><span class="sc7">1000000</span><span class="sc13">]</span><span class="sc0"> </span><span class="sc9">of</span><span class="sc0"> </span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">procedure</span><span class="sc0"> </span><span class="sc1">nhap</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+  </span><span class="sc9">begin</span><span class="sc0">
+      </span><span class="sc1">readln</span><span class="sc13">(</span><span class="sc1">n</span><span class="sc13">);</span><span class="sc0">
+      </span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc7">0</span><span class="sc13">]:=</span><span class="sc7">0</span><span class="sc13">;</span><span class="sc0">
+      </span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:=</span><span class="sc7">1</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">n</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+        </span><span class="sc9">begin</span><span class="sc0">
+            </span><span class="sc1">read</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]);</span><span class="sc0">
+            </span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]:=</span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">-</span><span class="sc7">1</span><span class="sc13">]+</span><span class="sc1">a</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">];</span><span class="sc0">
+        </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+  </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">function</span><span class="sc0"> </span><span class="sc1">min</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">,</span><span class="sc1">b</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">):</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+  </span><span class="sc9">begin</span><span class="sc0">
+      </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">a</span><span class="sc13">&gt;</span><span class="sc1">b</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">b</span><span class="sc13">)</span><span class="sc0"> </span><span class="sc9">else</span><span class="sc0"> </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">);</span><span class="sc0">
+  </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">procedure</span><span class="sc0"> </span><span class="sc1">xuli</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">,</span><span class="sc1">j</span><span class="sc13">,</span><span class="sc1">res</span><span class="sc13">,</span><span class="sc1">l</span><span class="sc13">,</span><span class="sc1">vt</span><span class="sc13">,</span><span class="sc1">r</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+  </span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">res</span><span class="sc13">:=-</span><span class="sc1">maxlongint</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">j</span><span class="sc13">:=</span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc7">0</span><span class="sc13">];</span><span class="sc1">vt</span><span class="sc13">:=</span><span class="sc7">1</span><span class="sc13">;</span><span class="sc0">
+     </span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:=</span><span class="sc7">1</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">n</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+      </span><span class="sc9">begin</span><span class="sc0">
+            </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">res</span><span class="sc0"> </span><span class="sc13">&lt;</span><span class="sc0"> </span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]</span><span class="sc0"> </span><span class="sc13">-</span><span class="sc0"> </span><span class="sc1">j</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0">
+              </span><span class="sc9">begin</span><span class="sc0">
+                  </span><span class="sc1">res</span><span class="sc13">:=</span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]-</span><span class="sc1">j</span><span class="sc13">;</span><span class="sc0">
+                  </span><span class="sc1">l</span><span class="sc13">:=</span><span class="sc1">vt</span><span class="sc13">;</span><span class="sc0">
+                  </span><span class="sc1">r</span><span class="sc13">:=</span><span class="sc1">i</span><span class="sc13">;</span><span class="sc0">
+              </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+            </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">j</span><span class="sc13">&gt;</span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0">
+              </span><span class="sc9">begin</span><span class="sc0">
+                  </span><span class="sc1">j</span><span class="sc13">:=</span><span class="sc1">pre</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">];</span><span class="sc0">
+                  </span><span class="sc1">vt</span><span class="sc13">:=</span><span class="sc1">i</span><span class="sc13">+</span><span class="sc7">1</span><span class="sc13">;</span><span class="sc0">
+              </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+      </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+     </span><span class="sc1">writeln</span><span class="sc13">(</span><span class="sc1">res</span><span class="sc13">);</span><span class="sc0">
+     </span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:=</span><span class="sc1">l</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">r</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0"> </span><span class="sc1">write</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">],</span><span class="sc10">' '</span><span class="sc13">);</span><span class="sc0">
+  </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">input</span><span class="sc13">,</span><span class="sc10">'daycon.inp'</span><span class="sc13">);</span><span class="sc1">reset</span><span class="sc13">(</span><span class="sc1">input</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">output</span><span class="sc13">,</span><span class="sc10">'daycon.out'</span><span class="sc13">);</span><span class="sc1">rewrite</span><span class="sc13">(</span><span class="sc1">output</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">nhap</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">xuli</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">.</span>
 	</div>
     <div class="typing manguon code-py">
 Mã nguồn Python đang được cập nhật...
