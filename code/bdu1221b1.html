@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+	<meta name="author" content="Tran Huu Nam">
+    <meta http-equiv="refresh" content="400">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="../inc/typing.js"></script>
+    <script src="../inc/codechung.js"></script>
+	<link rel="stylesheet" href="../inc/kieu.css"/>
+	<link rel="stylesheet" href="../inc/codechung.css"/>
+  </head>
+  <body>
+    <div class="quanho">//Tran Huu Nam hoclen.top</div>
+	<div class="typing manguon code-cpp">
+<span class="sc9">#include&lt;bits/stdc++.h&gt;
+#define ta long int
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc5">namespace</span><span class="sc0"> </span><span class="sc11">std</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc16">bool</span><span class="sc0"> </span><span class="sc11">nt</span><span class="sc10">(</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">cnt</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">cnt</span><span class="sc10">==</span><span class="sc4">1</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc11">cnt</span><span class="sc10">==</span><span class="sc4">2</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc11">cnt</span><span class="sc10">==</span><span class="sc4">3</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">false</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">2</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;=</span><span class="sc11">sqrt</span><span class="sc10">(</span><span class="sc11">cnt</span><span class="sc10">);</span><span class="sc11">i</span><span class="sc10">++)</span><span class="sc0">
+        </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">cnt</span><span class="sc10">%</span><span class="sc11">i</span><span class="sc10">==</span><span class="sc4">0</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">true</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">false</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">tong</span><span class="sc10">(</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+    </span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">while</span><span class="sc10">(</span><span class="sc11">x</span><span class="sc10">&gt;</span><span class="sc4">0</span><span class="sc10">)</span><span class="sc0">
+    </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">s</span><span class="sc10">+=</span><span class="sc11">x</span><span class="sc10">%</span><span class="sc4">10</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc11">x</span><span class="sc10">/=</span><span class="sc4">10</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc16">bool</span><span class="sc0"> </span><span class="sc11">ktra</span><span class="sc10">(</span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">y</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc10">{</span><span class="sc0">
+   </span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">k</span><span class="sc10">=</span><span class="sc11">y</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">p</span><span class="sc10">=</span><span class="sc4">2</span><span class="sc10">;</span><span class="sc0">
+   </span><span class="sc5">while</span><span class="sc10">(</span><span class="sc11">k</span><span class="sc10">&gt;=</span><span class="sc11">p</span><span class="sc10">*</span><span class="sc11">p</span><span class="sc10">)</span><span class="sc0">
+   </span><span class="sc10">{</span><span class="sc0">
+       </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">k</span><span class="sc10">%</span><span class="sc11">p</span><span class="sc10">==</span><span class="sc4">0</span><span class="sc10">)</span><span class="sc0">
+       </span><span class="sc10">{</span><span class="sc0">
+           </span><span class="sc11">s</span><span class="sc10">+=</span><span class="sc11">tong</span><span class="sc10">(</span><span class="sc11">p</span><span class="sc10">);</span><span class="sc0">
+           </span><span class="sc11">k</span><span class="sc10">/=</span><span class="sc11">p</span><span class="sc10">;</span><span class="sc0">
+       </span><span class="sc10">}</span><span class="sc0">
+       </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc11">p</span><span class="sc10">++;</span><span class="sc0">
+   </span><span class="sc10">}</span><span class="sc0">
+   </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">k</span><span class="sc10">&gt;</span><span class="sc4">1</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">+=</span><span class="sc11">tong</span><span class="sc10">(</span><span class="sc11">k</span><span class="sc10">);</span><span class="sc0">
+   </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">tong</span><span class="sc10">(</span><span class="sc11">y</span><span class="sc10">)==</span><span class="sc11">s</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">true</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc5">false</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">(){</span><span class="sc0">
+    </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"SPNUM.INP"</span><span class="sc10">,</span><span class="sc6">"r"</span><span class="sc10">,</span><span class="sc11">stdin</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">freopen</span><span class="sc10">(</span><span class="sc6">"SPNUM.OUT"</span><span class="sc10">,</span><span class="sc6">"w"</span><span class="sc10">,</span><span class="sc11">stdout</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">ios_base</span><span class="sc10">::</span><span class="sc11">sync_with_stdio</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">cin</span><span class="sc10">.</span><span class="sc11">tie</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0"> </span><span class="sc11">cout</span><span class="sc10">.</span><span class="sc11">tie</span><span class="sc10">(</span><span class="sc4">0</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">cin</span><span class="sc10">&gt;&gt;</span><span class="sc11">n</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc11">m</span><span class="sc10">=</span><span class="sc11">n</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">while</span><span class="sc10">(</span><span class="sc11">ktra</span><span class="sc10">(</span><span class="sc11">m</span><span class="sc10">)==</span><span class="sc5">false</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc11">nt</span><span class="sc10">(</span><span class="sc11">m</span><span class="sc10">)==</span><span class="sc5">false</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc11">m</span><span class="sc10">++;</span><span class="sc0">
+    </span><span class="sc11">cout</span><span class="sc10">&lt;&lt;</span><span class="sc11">m</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span>
+	</div>
+	<div class="typing manguon code-pas">
+<span class="sc9">var</span><span class="sc0"> </span><span class="sc1">n</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">fi</span><span class="sc13">,</span><span class="sc1">fo</span><span class="sc13">:</span><span class="sc1">text</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">function</span><span class="sc0"> </span><span class="sc1">snt</span><span class="sc13">(</span><span class="sc1">b</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">):</span><span class="sc1">boolean</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">x</span><span class="sc13">:</span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">b</span><span class="sc13">&lt;</span><span class="sc7">2</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">false</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">x</span><span class="sc13">:=</span><span class="sc7">2</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">trunc</span><span class="sc13">(</span><span class="sc1">sqrt</span><span class="sc13">(</span><span class="sc1">b</span><span class="sc13">))</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+    </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">b</span><span class="sc0"> </span><span class="sc9">mod</span><span class="sc0"> </span><span class="sc1">x</span><span class="sc13">=</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">false</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">true</span><span class="sc13">);</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">function</span><span class="sc0"> </span><span class="sc1">tcs</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">):</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">s</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">s</span><span class="sc13">:=</span><span class="sc7">0</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">while</span><span class="sc0"> </span><span class="sc1">a</span><span class="sc13">&lt;&gt;</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+        </span><span class="sc9">begin</span><span class="sc0">
+            </span><span class="sc1">s</span><span class="sc13">:=</span><span class="sc1">s</span><span class="sc13">+</span><span class="sc1">a</span><span class="sc0"> </span><span class="sc9">mod</span><span class="sc0"> </span><span class="sc7">10</span><span class="sc13">;</span><span class="sc0">
+            </span><span class="sc1">a</span><span class="sc13">:=</span><span class="sc1">a</span><span class="sc0"> </span><span class="sc9">div</span><span class="sc0"> </span><span class="sc7">10</span><span class="sc13">;</span><span class="sc0">
+        </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">);</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">function</span><span class="sc0"> </span><span class="sc1">tts</span><span class="sc13">(</span><span class="sc1">m</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">):</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">t</span><span class="sc13">,</span><span class="sc1">tam</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">t</span><span class="sc13">:=</span><span class="sc7">0</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">tam</span><span class="sc13">:=</span><span class="sc7">2</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">repeat</span><span class="sc0">
+       </span><span class="sc9">begin</span><span class="sc0">
+           </span><span class="sc9">while</span><span class="sc0"> </span><span class="sc1">m</span><span class="sc0"> </span><span class="sc9">mod</span><span class="sc0"> </span><span class="sc1">tam</span><span class="sc13">=</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+               </span><span class="sc9">begin</span><span class="sc0">
+                   </span><span class="sc1">m</span><span class="sc13">:=</span><span class="sc1">m</span><span class="sc0"> </span><span class="sc9">div</span><span class="sc0"> </span><span class="sc1">tam</span><span class="sc13">;</span><span class="sc0">
+                   </span><span class="sc1">t</span><span class="sc13">:=</span><span class="sc1">t</span><span class="sc13">+</span><span class="sc1">tcs</span><span class="sc13">(</span><span class="sc1">tam</span><span class="sc13">);</span><span class="sc0">
+               </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+ 
+           </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">snt</span><span class="sc13">(</span><span class="sc1">m</span><span class="sc13">)=</span><span class="sc1">true</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0">
+               </span><span class="sc9">begin</span><span class="sc0">
+                   </span><span class="sc1">t</span><span class="sc13">:=</span><span class="sc1">t</span><span class="sc13">+</span><span class="sc1">tcs</span><span class="sc13">(</span><span class="sc1">m</span><span class="sc13">);</span><span class="sc0">
+                   </span><span class="sc1">m</span><span class="sc13">:=</span><span class="sc1">m</span><span class="sc0"> </span><span class="sc9">div</span><span class="sc0"> </span><span class="sc1">m</span><span class="sc13">;</span><span class="sc0">
+               </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+           </span><span class="sc1">tam</span><span class="sc13">:=</span><span class="sc1">tam</span><span class="sc13">+</span><span class="sc7">1</span><span class="sc13">;</span><span class="sc0">
+       </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">until</span><span class="sc0"> </span><span class="sc1">m</span><span class="sc13">=</span><span class="sc7">1</span><span class="sc0"> </span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">exit</span><span class="sc13">(</span><span class="sc1">t</span><span class="sc13">);</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">procedure</span><span class="sc0"> </span><span class="sc1">khaibao</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">,</span><span class="sc10">'SPNUM.INP'</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">fo</span><span class="sc13">,</span><span class="sc10">'SPNUM.OUT'</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc5">{$i-}</span><span class="sc0"> </span><span class="sc1">reset</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">);</span><span class="sc0"> </span><span class="sc5">{$i+}</span><span class="sc0">
+    </span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">ioresult</span><span class="sc0"> </span><span class="sc13">&gt;</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0">
+        </span><span class="sc9">begin</span><span class="sc0">
+            </span><span class="sc1">rewrite</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">);</span><span class="sc0">
+            </span><span class="sc1">reset</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">);</span><span class="sc0">
+        </span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+ 
+    </span><span class="sc1">readln</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">,</span><span class="sc1">n</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">rewrite</span><span class="sc13">(</span><span class="sc1">fo</span><span class="sc13">);</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">procedure</span><span class="sc0"> </span><span class="sc1">ct</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">var</span><span class="sc0"> </span><span class="sc1">x</span><span class="sc13">:</span><span class="sc1">int64</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">n</span><span class="sc13">:=</span><span class="sc1">n</span><span class="sc13">+</span><span class="sc7">1</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc9">while</span><span class="sc0"> </span><span class="sc13">(</span><span class="sc1">tcs</span><span class="sc13">(</span><span class="sc1">n</span><span class="sc13">)&lt;&gt;</span><span class="sc1">tts</span><span class="sc13">(</span><span class="sc1">n</span><span class="sc13">))</span><span class="sc0"> </span><span class="sc9">or</span><span class="sc0"> </span><span class="sc13">(</span><span class="sc1">snt</span><span class="sc13">(</span><span class="sc1">n</span><span class="sc13">)=</span><span class="sc1">true</span><span class="sc13">)</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+    </span><span class="sc1">n</span><span class="sc13">:=</span><span class="sc1">n</span><span class="sc13">+</span><span class="sc7">1</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">writeln</span><span class="sc13">(</span><span class="sc1">fo</span><span class="sc13">,</span><span class="sc1">n</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">close</span><span class="sc13">(</span><span class="sc1">fi</span><span class="sc13">);</span><span class="sc0">
+    </span><span class="sc1">close</span><span class="sc13">(</span><span class="sc1">fo</span><span class="sc13">);</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+    </span><span class="sc1">khaibao</span><span class="sc13">;</span><span class="sc0">
+    </span><span class="sc1">ct</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">end</span><span class="sc13">.</span>
+	</div>
+    <div class="typing manguon code-py">
+Mã nguồn Python đang được cập nhật...
+	</div>
+
+<div class="typing manguon maudo">Các khóa học ôn thi HSG Tin học: go.hoclen.top/hsg
+
+Trang chủ: hoclen.top</div>
+<div id="footer" style="display:none;margin-top:50px;"><img src="../inc/luyende.png"/></div>
+  </body>
+</html>
