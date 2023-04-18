@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+	<meta name="author" content="Tran Huu Nam">
+    <meta http-equiv="refresh" content="400">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="../inc/typing.js"></script>
+    <script src="../inc/codechung.js"></script>
+	<link rel="stylesheet" href="../inc/kieu.css"/>
+	<link rel="stylesheet" href="../inc/codechung.css"/>
+  </head>
+  <body>
+    <div class="quanho">//Tran Huu Nam go.hoclen.top/hsg</div>
+	<div class="typing manguon code-cpp">
+<span class="sc9">#include&lt;bits/stdc++.h&gt;
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc5">namespace</span><span class="sc0"> </span><span class="sc11">std</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">tonguoc</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">n</span><span class="sc10">){</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">tong</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;=</span><span class="sc11">sqrt</span><span class="sc10">(</span><span class="sc11">n</span><span class="sc10">);</span><span class="sc11">i</span><span class="sc10">++)</span><span class="sc0"> 
+        </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">n</span><span class="sc10">%</span><span class="sc11">i</span><span class="sc10">==</span><span class="sc4">0</span><span class="sc10">){</span><span class="sc0">
+            </span><span class="sc11">tong</span><span class="sc10">+=</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+            </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">i</span><span class="sc10">!=</span><span class="sc11">n</span><span class="sc10">/</span><span class="sc11">i</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc11">tong</span><span class="sc10">+=</span><span class="sc11">n</span><span class="sc10">/</span><span class="sc11">i</span><span class="sc10">;</span><span class="sc0">
+        </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">tong</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0"><div class="quanho">//Tran Huu Nam go.hoclen.top/hsg</div>
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">(){</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">,</span><span class="sc11">b</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">cin</span><span class="sc10">&gt;&gt;</span><span class="sc11">a</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">b</span><span class="sc10">=</span><span class="sc11">a</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">ta</span><span class="sc10">=</span><span class="sc11">tonguoc</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">),</span><span class="sc11">tb</span><span class="sc10">=</span><span class="sc11">tonguoc</span><span class="sc10">(</span><span class="sc11">b</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">ua</span><span class="sc10">=</span><span class="sc11">__gcd</span><span class="sc10">(</span><span class="sc11">ta</span><span class="sc10">,</span><span class="sc11">a</span><span class="sc10">),</span><span class="sc11">ub</span><span class="sc10">=</span><span class="sc11">__gcd</span><span class="sc10">(</span><span class="sc11">tb</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc11">a</span><span class="sc10">/=</span><span class="sc11">ua</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc11">ta</span><span class="sc10">/=</span><span class="sc11">ua</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">while</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">tb</span><span class="sc10">/</span><span class="sc11">ub</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc11">ta</span><span class="sc0"> </span><span class="sc10">||</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">/</span><span class="sc11">ub</span><span class="sc0"> </span><span class="sc10">!=</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">b</span><span class="sc10">++;</span><span class="sc0">
+        </span><span class="sc11">tb</span><span class="sc10">=</span><span class="sc11">tonguoc</span><span class="sc10">(</span><span class="sc11">b</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc11">ub</span><span class="sc10">=</span><span class="sc11">__gcd</span><span class="sc10">(</span><span class="sc11">tb</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0"><div class="quanho">//Tran Huu Nam go.hoclen.top/hsg</div>
+    </span><span class="sc11">cout</span><span class="sc10">&lt;&lt;</span><span class="sc11">b</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span>
+	</div>
+	<div class="typing manguon code-pas">
+Mã nguồn Pascal đang được cập nhật...
+	</div>
+    <div class="typing manguon code-py">
+Mã nguồn Python đang được cập nhật...
+	</div>
+
+<div class="typing manguon maudo">
+Chiêu sinh lớp luyện đề thi Tin học trẻ cấp tỉnh: http://go.hoclen.top/tht
+  
+Các lớp thuật toán học ôn thi HSG Tin học: http://go.hoclen.top/hsg
+</div>
+<div id="footer" style="display:none;margin-top:50px;"><img src="../inc/luyende.png"/></div>
+  </body>
+</html>
