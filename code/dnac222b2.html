@@ -36,10 +36,38 @@
 </span><span class="sc10">}</span>
 	</div>
 	<div class="typing manguon code-pas">
-Mã nguồn Pascal đang được cập nhật...
+<span class="sc9">var</span><span class="sc0"> </span><span class="sc1">s</span><span class="sc13">,</span><span class="sc0"> </span><span class="sc1">a</span><span class="sc0"> </span><span class="sc13">:</span><span class="sc0"> </span><span class="sc1">ansistring</span><span class="sc13">;</span><span class="sc0">
+	</span><span class="sc1">n</span><span class="sc13">,</span><span class="sc1">p</span><span class="sc13">,</span><span class="sc1">i</span><span class="sc0"> </span><span class="sc13">:</span><span class="sc0"> </span><span class="sc1">longint</span><span class="sc13">;</span><span class="sc0">
+</span><span class="sc9">begin</span><span class="sc0">
+	</span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">input</span><span class="sc13">,</span><span class="sc10">'ROBOT.inp'</span><span class="sc13">);</span><span class="sc1">reset</span><span class="sc13">(</span><span class="sc1">input</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">assign</span><span class="sc13">(</span><span class="sc1">output</span><span class="sc13">,</span><span class="sc10">'ROBOT.out'</span><span class="sc13">);</span><span class="sc1">rewrite</span><span class="sc13">(</span><span class="sc1">output</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">readln</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">readln</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">n</span><span class="sc13">:=</span><span class="sc1">length</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">p</span><span class="sc13">:=</span><span class="sc7">0</span><span class="sc13">;</span><span class="sc0"><span class="quanho">//Tran Huu Nam go.hoclen.top/tht</span>
+	</span><span class="sc9">for</span><span class="sc0"> </span><span class="sc1">i</span><span class="sc13">:=</span><span class="sc0"> </span><span class="sc7">1</span><span class="sc0"> </span><span class="sc9">to</span><span class="sc0"> </span><span class="sc1">length</span><span class="sc13">(</span><span class="sc1">a</span><span class="sc13">)</span><span class="sc0"> </span><span class="sc9">do</span><span class="sc0">
+		</span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">a</span><span class="sc13">[</span><span class="sc1">i</span><span class="sc13">]=</span><span class="sc10">'L'</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc1">inc</span><span class="sc13">(</span><span class="sc1">p</span><span class="sc13">)</span><span class="sc0">
+		</span><span class="sc9">else</span><span class="sc0"> </span><span class="sc1">dec</span><span class="sc13">(</span><span class="sc1">p</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">p</span><span class="sc13">:=</span><span class="sc0"> </span><span class="sc1">p</span><span class="sc0"> </span><span class="sc9">mod</span><span class="sc0"> </span><span class="sc1">n</span><span class="sc13">;</span><span class="sc0">
+	</span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">p</span><span class="sc13">&lt;</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc1">p</span><span class="sc13">:=</span><span class="sc1">p</span><span class="sc13">+</span><span class="sc1">n</span><span class="sc13">;</span><span class="sc0">
+	</span><span class="sc9">if</span><span class="sc0"> </span><span class="sc1">p</span><span class="sc13">&gt;</span><span class="sc7">0</span><span class="sc0"> </span><span class="sc9">then</span><span class="sc0"> </span><span class="sc1">s</span><span class="sc13">:=</span><span class="sc1">copy</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">,</span><span class="sc1">p</span><span class="sc13">+</span><span class="sc7">1</span><span class="sc13">,</span><span class="sc1">n</span><span class="sc13">-</span><span class="sc1">p</span><span class="sc13">)+</span><span class="sc1">copy</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">,</span><span class="sc7">1</span><span class="sc13">,</span><span class="sc1">p</span><span class="sc13">);</span><span class="sc0">
+	</span><span class="sc1">write</span><span class="sc13">(</span><span class="sc1">s</span><span class="sc13">);</span><span class="sc0"><span class="quanho">//Tran Huu Nam go.hoclen.top/tht</span>
+</span><span class="sc9">end</span><span class="sc13">.</span>
 	</div>
     <div class="typing manguon code-py">
-Mã nguồn Python đang được cập nhật...
+<span class="sc5">import</span><span class="sc0"> </span><span class="sc11">sys</span><span class="sc0">
+</span><span class="sc11">sys</span><span class="sc10">.</span><span class="sc11">stdin</span><span class="sc10">=</span><span class="sc14">open</span><span class="sc10">(</span><span class="sc3">"ROBOT.INP"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">sys</span><span class="sc10">.</span><span class="sc11">stdout</span><span class="sc10">=</span><span class="sc14">open</span><span class="sc10">(</span><span class="sc3">"ROBOT.OUT"</span><span class="sc10">,</span><span class="sc3">"w"</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">s</span><span class="sc10">=</span><span class="sc14">input</span><span class="sc10">()</span><span class="sc0">
+</span><span class="sc11">a</span><span class="sc10">=</span><span class="sc14">input</span><span class="sc10">()</span><span class="sc0">
+</span><span class="sc11">n</span><span class="sc10">=</span><span class="sc14">len</span><span class="sc10">(</span><span class="sc11">s</span><span class="sc10">)</span><span class="sc0">
+</span><span class="sc11">p</span><span class="sc10">=</span><span class="sc2">0</span><span class="sc0">
+</span><span class="sc5">for</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc0"> </span><span class="sc5">in</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">:</span><span class="sc0">
+    </span><span class="sc11">p</span><span class="sc10">+=</span><span class="sc2">1</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">==</span><span class="sc4">'L'</span><span class="sc0"> </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc10">-</span><span class="sc2">1</span><span class="sc0">
+</span><span class="sc11">p</span><span class="sc10">%=</span><span class="sc11">n</span><span class="sc0"><span class="quanho"> #Tran Huu Nam go.hoclen.top/tht</span>
+</span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">p</span><span class="sc10">&lt;</span><span class="sc2">0</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">p</span><span class="sc10">+=</span><span class="sc11">n</span><span class="sc0">
+</span><span class="sc5">if</span><span class="sc0"> </span><span class="sc11">p</span><span class="sc10">&gt;</span><span class="sc2">0</span><span class="sc10">:</span><span class="sc0"> </span><span class="sc11">s</span><span class="sc10">=</span><span class="sc11">s</span><span class="sc10">[</span><span class="sc11">p</span><span class="sc10">:]+</span><span class="sc11">s</span><span class="sc10">[:</span><span class="sc11">p</span><span class="sc10">]</span><span class="sc0">
+</span><span class="sc14">print</span><span class="sc10">(</span><span class="sc11">s</span><span class="sc10">)</span>
 	</div>
 
 <div class="typing manguon maudo">Lớp luyện giải đề thi Tin học trẻ cấp tỉnh: http://go.hoclen.top/tht
