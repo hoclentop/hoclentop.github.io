@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="utf8"/>
+	<meta name="author" content="Tran Huu Nam">
+    <meta http-equiv="refresh" content="400">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="../inc/typing.js"></script>
+    <script src="../inc/codechung.js"></script>
+	<link rel="stylesheet" href="../inc/kieu.css"/>
+	<link rel="stylesheet" href="../inc/codechung.css"/>
+  </head>
+  <body>
+    <div class="quanho">//Tran Huu Nam hoclen.top</div>
+	<div class="typing manguon code-cpp">
+<span class="sc9">#include&lt;bits/stdc++.h&gt;
+</span><span class="sc5">using</span><span class="sc0"> </span><span class="sc5">namespace</span><span class="sc0"> </span><span class="sc11">std</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc4">101</span><span class="sc10">][</span><span class="sc4">101</span><span class="sc10">];</span><span class="sc0">
+</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">,</span><span class="sc11">b</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc11">smax</span><span class="sc10">(</span><span class="sc11">string</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">string</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc10">{</span><span class="sc0">
+  </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">,</span><span class="sc11">j</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">la</span><span class="sc10">=</span><span class="sc11">a</span><span class="sc10">.</span><span class="sc11">length</span><span class="sc10">(),</span><span class="sc0"> </span><span class="sc11">lb</span><span class="sc10">=</span><span class="sc11">b</span><span class="sc10">.</span><span class="sc11">length</span><span class="sc10">();</span><span class="sc0">
+  </span><span class="sc5">for</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">&lt;</span><span class="sc11">la</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">++)</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">]!=</span><span class="sc7">'0'</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">break</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">for</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">j</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">j</span><span class="sc10">&lt;</span><span class="sc11">lb</span><span class="sc10">;</span><span class="sc0"> </span><span class="sc11">j</span><span class="sc10">++)</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">b</span><span class="sc10">[</span><span class="sc11">j</span><span class="sc10">]!=</span><span class="sc7">'0'</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">break</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc11">a</span><span class="sc10">=</span><span class="sc11">a</span><span class="sc10">.</span><span class="sc11">substr</span><span class="sc10">(</span><span class="sc11">i</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc11">b</span><span class="sc10">=</span><span class="sc11">b</span><span class="sc10">.</span><span class="sc11">substr</span><span class="sc10">(</span><span class="sc11">j</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">la</span><span class="sc10">==</span><span class="sc11">lb</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">return</span><span class="sc0">  </span><span class="sc11">max</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">,</span><span class="sc11">b</span><span class="sc10">);</span><span class="sc0">
+  </span><span class="sc5">if</span><span class="sc0"> </span><span class="sc10">(</span><span class="sc11">la</span><span class="sc10">&lt;</span><span class="sc11">lb</span><span class="sc10">)</span><span class="sc0"> </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">b</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc11">a</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">(){</span><span class="sc0">
+  </span><span class="sc11">cin</span><span class="sc10">&gt;&gt;</span><span class="sc11">a</span><span class="sc10">&gt;&gt;</span><span class="sc11">b</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">x</span><span class="sc10">=</span><span class="sc11">a</span><span class="sc10">.</span><span class="sc11">length</span><span class="sc10">(),</span><span class="sc11">y</span><span class="sc10">=</span><span class="sc11">b</span><span class="sc10">.</span><span class="sc11">length</span><span class="sc10">(),</span><span class="sc11">xv</span><span class="sc10">,</span><span class="sc11">yv</span><span class="sc10">;</span><span class="sc0">
+  </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">i</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">&lt;</span><span class="sc11">x</span><span class="sc10">;</span><span class="sc11">i</span><span class="sc10">++){</span><span class="sc0">
+    </span><span class="sc5">for</span><span class="sc10">(</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">j</span><span class="sc10">=</span><span class="sc4">0</span><span class="sc10">;</span><span class="sc11">j</span><span class="sc10">&lt;</span><span class="sc11">y</span><span class="sc10">;</span><span class="sc11">j</span><span class="sc10">++){</span><span class="sc0">
+      </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">]==</span><span class="sc11">b</span><span class="sc10">[</span><span class="sc11">j</span><span class="sc10">])</span><span class="sc0"> </span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">][</span><span class="sc11">j</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">]=</span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">][</span><span class="sc11">j</span><span class="sc10">]+</span><span class="sc11">a</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">];</span><span class="sc0">
+      </span><span class="sc5">else</span><span class="sc0"> </span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">][</span><span class="sc11">j</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">]=</span><span class="sc11">smax</span><span class="sc10">(</span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">][</span><span class="sc11">j</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">],</span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">i</span><span class="sc10">+</span><span class="sc4">1</span><span class="sc10">][</span><span class="sc11">j</span><span class="sc10">]);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc10">}</span><span class="sc0">
+  </span><span class="sc11">cout</span><span class="sc10">&lt;&lt;</span><span class="sc11">dp</span><span class="sc10">[</span><span class="sc11">x</span><span class="sc10">][</span><span class="sc11">y</span><span class="sc10">];</span><span class="sc0">
+</span><span class="sc10">}</span>
+	</div>
+	<div class="typing manguon code-pas">
+Mã nguồn Pascal đang được cập nhật...
+	</div>
+    <div class="typing manguon code-py">
+Mã nguồn Python đang được cập nhật...
+	</div>
+
+<div class="typing manguon maudo">
+
+Các khóa học thuật toán học ôn thi HSG Tin học: https://hoclen.top/thuattoan.html 
+
+Các tài liệu ôn thi HSG Tin học: https://hoclen.top/sach.html 
+</div>
+
+<div class="typing manguon">Chọn ngôn ngữ để xem <a href="?nn=cpp">C++</a> | <a href="?nn=py">Python</a> | <a href="?nn=pas">Pascal</a></div>
+
+<div id="footer" style="display:none;margin-top:50px;"><img src="../inc/luyende.png"/></div>
+  </body>
+</html>
