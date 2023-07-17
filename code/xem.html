@@ -35,7 +35,9 @@
 		  $("#noidung").html(data);
 		  txt = data;
 		  
-		});
+		}).fail(function() {
+		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...");
+		  });
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
