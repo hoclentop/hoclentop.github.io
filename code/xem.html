@@ -39,7 +39,7 @@
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
 	}
-	$.get( "qccode.txt", function(data) {
+	$.get( "../qc/qccode.txt", function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
 	  $("#noidung").append(ds[c]);
