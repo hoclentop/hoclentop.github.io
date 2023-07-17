@@ -16,7 +16,7 @@
   <script>
    var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
    var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
-   
+   var stop = false;
    function chay() {
     var queryString = window.location.search;
 	var urlParams = new URLSearchParams(queryString);
@@ -55,12 +55,15 @@
 		  //speed: 50,
 		  lifeLike: true,
 		  cursorChar: "█",
+	     	  afterComplete: function(go) {
+			  stop=true;
+		  }
 		}).go();
 	 setTimeout(gobottom, 20000);
    }
    function gobottom() {
      window.scrollTo(0, document.body.scrollHeight);
-	 setTimeout(gobottom, 1000);
+	if (!stop) setTimeout(gobottom, 1000);
    }
    setTimeout(chay,2000);
   </script>
