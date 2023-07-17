@@ -17,11 +17,12 @@
    var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
    var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
    var stop = false;
+   var bai= "";
+   var nnlt="cpp";
    function chay() {
     var queryString = window.location.search;
 	var urlParams = new URLSearchParams(queryString);
-	var bai= "";
-	var nnlt="cpp";
+	
 	if (urlParams.has("bai")) bai=urlParams.getAll('bai')[0];
 	if (urlParams.has("nn")) nnlt=urlParams.getAll('nn')[0];
 	//$("#debug").html(bai+"."+nnlt);
