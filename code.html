@@ -1,0 +1,84 @@
+<html>
+ <head>
+  <meta charset="utf8"/>
+  <meta name="author" content="Tran Huu Nam">
+  <style>
+    .manguon {
+      font-family: 'Courier New';
+      font-size: 12pt;
+      white-space: pre;
+      line-height: 120%;
+    }
+	a:link { text-decoration: none; }
+  </style>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+   var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
+   var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
+   var stop = false;
+   var bai= "";
+   var nnlt="cpp";
+   function chay() {
+    var queryString = window.location.search;
+	var urlParams = new URLSearchParams(queryString);
+	
+	if (urlParams.has("bai")) bai=urlParams.getAll('bai')[0];
+	if (urlParams.has("nn")) nnlt=urlParams.getAll('nn')[0];
+	//$("#debug").html(bai+"."+nnlt);
+	if (bai!="") {
+		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
+		$.get("code/"+bai+"."+nnlt, function(data) {
+		  data = data.replaceAll("<", "&lt;");
+		  data = data.replaceAll(">", "&gt;");
+		  data = data.replace(/\t/g, '    ')
+		  $("#noidung").html(data);
+		  txt = data;
+		  
+		}).fail(function() {
+		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...");
+		  });
+	}
+	else {
+		$("#debug").html("Không tìm thấy mã nguồn");
+	}
+	$.get( "qc/qccode.txt", function(data) {
+	  var ds = data.split("\n");
+	  var c = randbetween(1, ds.length)-1;
+	  $("#noidung").append("<br/>"+ds[c]);
+	});
+	setTimeout(gocode, 200);
+   }
+   function randbetween(a, b) {
+     return Math.floor(Math.random() * (b-a+1))+a;
+   }
+   function gocode() {
+	   $("#noidung").append("<br>Xem bằng NNLT khác: ");
+	 if (nnlt!="cpp") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=cpp'>C++</a> | ");
+	 if (nnlt!="pas") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=pas'>Pascal</a> | ");
+	 if (nnlt!="py") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=py'>Python</a> | ");
+     new TypeIt("#noidung", {
+		  //strings: data,
+		  //speed: 50,
+		  lifeLike: true,
+		  cursorChar: "█",
+	     	  afterComplete: function(go) {
+			  stop=true;
+		  }
+		}).go();
+	 setTimeout(gobottom, 20000);
+   }
+   function gobottom() {
+     window.scrollTo(0, document.body.scrollHeight);
+	if (!stop) setTimeout(gobottom, 1000);
+   }
+   setTimeout(chay,2000);
+  </script>
+ </head>
+ <body>
+  <div style="background-color:gray;" id="header">XEM MÃ NGUỒN</div>
+  <div class="typing manguon" id="noidung"></div>
+  <div id="debug"></div>
+  <div style="background-color:yellow;"  id="footer">© <a href="https://hoclen.top">hoclen.top</a> , 2023</div>
+ </body>
+</html> 
