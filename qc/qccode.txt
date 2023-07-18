@@ -3,5 +3,6 @@ Sách học ôn thi HSG <a href="https://hoclen.top/sach.html">hoclen.top/sach.h
 Sách BDHSG <a href="https://hoclen.top/sach.html">hoclen.top/sach.html</a>
 Khóa học thuật toán cơ bản CB1 <a href="https://hoclen.top/go/cb1">hoclen.top/go/cb1</a>
 Khóa học thuật toán cơ bản CB2 <a href="https://hoclen.top/go/cb2">hoclen.top/go/cb2</a>
-Khóa học thuật toán cơ bản NC1 <a href="https://hoclen.top/go/nc1">hoclen.top/go/nc1</a>
+Khóa học thuật toán nâng cao NC1 <a href="https://hoclen.top/go/nc1">hoclen.top/go/nc1</a>
 Tuyển chọn các bài code thiếu nhi <a href="https://hoclen.top/go/codethieunhi">hoclen.top/go/codethieunhi</a>
+Tuyển tập đề thi HSG cấp tỉnh Tin học THCS 2122 <a href="https://hoclen.top/go/sachde221">hoclen.top/go/sachde221</a>
