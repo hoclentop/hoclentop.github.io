@@ -54,9 +54,9 @@
    }
    function gocode() {
 	   $("#noidung").append("<br>Xem bằng NNLT khác: ");
-	 if (nnlt!="cpp") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=cpp'>C++</a> | ");
-	 if (nnlt!="pas") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=pas'>Pascal</a> | ");
-	 if (nnlt!="py") $("#noidung").append("<a href='xem.html?bai="+bai+"&nn=py'>Python</a> | ");
+	 if (nnlt!="cpp") $("#noidung").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
+	 if (nnlt!="pas") $("#noidung").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
+	 if (nnlt!="py") $("#noidung").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
      new TypeIt("#noidung", {
 		  //strings: data,
 		  //speed: 50,
