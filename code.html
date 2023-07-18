@@ -45,7 +45,7 @@
 	$.get( "qc/qccode.txt", function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
-	  $("#noidung").append("<br/>"+ds[c]);
+	  $("#noidung").append("<br><br>"+ds[c]);
 	});
 	setTimeout(gocode, 200);
    }
@@ -53,7 +53,7 @@
      return Math.floor(Math.random() * (b-a+1))+a;
    }
    function gocode() {
-	   $("#noidung").append("<br>Xem bằng NNLT khác: ");
+	   $("#noidung").append("<br><br>Xem bằng NNLT khác: ");
 	 if (nnlt!="cpp") $("#noidung").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
 	 if (nnlt!="pas") $("#noidung").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
 	 if (nnlt!="py") $("#noidung").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
