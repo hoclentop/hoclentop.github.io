@@ -2,6 +2,7 @@
  <head>
   <meta charset="utf8"/>
   <meta name="author" content="Tran Huu Nam">
+	 <meta http-equiv="refresh" content="300">
   <style>
     .manguon {
       font-family: 'Courier New';
@@ -29,7 +30,7 @@
 	//$("#debug").html(bai+"."+nnlt);
 	if (bai!="") {
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
-		$.get("code/"+bai+"."+nnlt, function(data) {
+		$.get("code/"+bai+"."+nnlt+"?v="+Math.random(), function(data) {
 		  data = data.replaceAll("<", "&lt;");
 		  data = data.replaceAll(">", "&gt;");
 		  data = data.replace(/\t/g, '    ')
@@ -47,7 +48,7 @@
 	layquangcao();
    }
    function layquangcao() {
-	$.get( "qc/qccode.txt", function(data) {
+	$.get( "qc/qccode.txt?v="+Math.random(), function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
 	  $("#noidung").append("<br><br>"+ds[c]);
