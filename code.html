@@ -20,6 +20,7 @@
    var bai= "";
    var nnlt="cpp";
    function chay() {
+	   $("#noidung").hide();
     var queryString = window.location.search;
 	var urlParams = new URLSearchParams(queryString);
 	
@@ -42,12 +43,16 @@
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
 	}
+	
+	layquangcao();
+   }
+   function layquangcao() {
 	$.get( "qc/qccode.txt", function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
 	  $("#noidung").append("<br><br>"+ds[c]);
 	});
-	setTimeout(gocode, 200);
+	   setTimeout(gocode, 500);
    }
    function randbetween(a, b) {
      return Math.floor(Math.random() * (b-a+1))+a;
@@ -57,6 +62,7 @@
 	 if (nnlt!="cpp") $("#noidung").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
 	 if (nnlt!="pas") $("#noidung").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
 	 if (nnlt!="py") $("#noidung").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
+	   $("#noidung").show();
      new TypeIt("#noidung", {
 		  //strings: data,
 		  //speed: 50,
