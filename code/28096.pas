@@ -1,13 +1,10 @@
-program Bai096;
-var a, b, c, x, y, z, max, min : integer;
+uses math;
+program Bai0962;
+var a,b,c,x,y,z:integer;
 begin
-  readln(a, b, c);
-  max := a;
-  if b > a then max := b else max := c;
-  z := max;
-  min := a;
-   if b < min then min := b else min := c;
-   x := min;
-   y := a + b +c - x - z;
-  write(x, '  ', y, '  ', z);
+  readln(a,b,c);
+  x := min(a, min(b,c));
+  z := max(a, max(b,c));
+  y := a + b + c - x - z;
+  write(x, y, z);
 end.
