@@ -3,9 +3,9 @@ using namespace std;
 
 int main() 
 {
-    int a,b,c,d;
-    cin>>a>>b>>c;
-    d=a*c+b;
-    cout<<d;
+    int n,k,kq;
+    cin>>k>>n;
+    kq=(n+k-1)/k*k;
+    cout<<kq;
     return 0;
 }

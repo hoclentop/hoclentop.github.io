@@ -3,9 +3,8 @@ using namespace std;
 
 int main() 
 {
-    int a,b,c,d;
-    cin>>a>>b>>c;
-    d=a*c+b;
-    cout<<d;
+    int c;
+    cin>>c;
+    cout<<char(c+96)<<" "<<char(c+64);
     return 0;
 }

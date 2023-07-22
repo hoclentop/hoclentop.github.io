@@ -3,9 +3,8 @@ using namespace std;
 
 int main() 
 {
-    int a,b,c,d;
-    cin>>a>>b>>c;
-    d=a*c+b;
-    cout<<d;
+    int x,y;
+    cin>>x>>y;
+    cout<<12*x+y;
     return 0;
 }
