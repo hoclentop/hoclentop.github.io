@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script src="md5.min.js"></script>
+  <script>
+    function chay() {
+        var txt="";
+        var bai="", ma="";
+        for (var b=1; b<=300; b++) {
+            bai="00"+b;
+            bai=bai.substr(bai.length-3,3);
+            ma=md5(bai);
+            ma=ma.substr(30);
+            txt+="<p>Bài "+bai+": CODE <a href='https://toi.hoclen.top/code.html?bai="+ma+bai+"'>C++</a> | <a href='https://toi.hoclen.top/code.html?bai="+ma+bai+"&nn=pas'>Pascal</a> | <a href='https://toi.hoclen.top/code.html?bai="+ma+bai+"&nn=py'>Python</a>";
+            
+     
+            txt+="</p>";
+        }
+        document.write(txt);
+    }
+    setTimeout(chay,2000);
+  </script>
+</head>
+<body>
+
+</body>
+
+</html>
