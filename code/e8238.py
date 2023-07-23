@@ -1,8 +1,8 @@
-n=int(input())
+n = int(input())
 a = [int(x) for x in input().split()]
 dem=0
-for i in range(n-1):
+for i in range(n):
     for j in range(i+1,n):
-        if a[i]==a[j]:
+        if a[j]==a[i]: 
             dem+=1
 print(dem)
