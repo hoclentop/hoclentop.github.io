@@ -17,7 +17,7 @@
   <script>
    var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
    var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
-   var stop = false;
+   var stop = 0;
    var bai= "";
    var nnlt="cpp";
    function chay() {
@@ -46,38 +46,40 @@
 	}
 	
 	layquangcao();
+	$("#ngonngu").html("Xem bằng NNLT khác: ");
+	if (nnlt!="cpp") $("#ngonngu").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
+	if (nnlt!="pas") $("#ngonngu").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
+	if (nnlt!="py") $("#ngonngu").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
+	setTimeout(gocode, 5000);
    }
    function layquangcao() {
 	$.get( "qc/qccode.txt?v="+Math.random(), function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
-	  $("#noidung").append("<br><br>"+ds[c]);
+	  $("#quangcao").html(ds[c]);
 	});
-	   setTimeout(gocode, 500);
+	   
    }
    function randbetween(a, b) {
      return Math.floor(Math.random() * (b-a+1))+a;
    }
    function gocode() {
-	   $("#noidung").append("<br><br>Xem bằng NNLT khác: ");
-	 if (nnlt!="cpp") $("#noidung").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
-	 if (nnlt!="pas") $("#noidung").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
-	 if (nnlt!="py") $("#noidung").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
+	   
 	   $("#noidung").show();
-     new TypeIt("#noidung", {
+     new TypeIt(".typing", {
 		  //strings: data,
 		  //speed: 50,
 		  lifeLike: true,
 		  cursorChar: "█",
 	     	  afterComplete: function(go) {
-			  stop=true;
+			  stop+=1;
 		  }
 		}).go();
 	 setTimeout(gobottom, 20000);
    }
    function gobottom() {
      window.scrollTo(0, document.body.scrollHeight);
-	if (!stop) setTimeout(gobottom, 1000);
+	if (stop<3) setTimeout(gobottom, 1000);
    }
    setTimeout(chay,2000);
   </script>
@@ -85,6 +87,10 @@
  <body>
   <div style="background-color:gray;" id="header">XEM MÃ NGUỒN</div>
   <div class="typing manguon" id="noidung"></div>
+  <div class="typing manguon">
+    <div id="quangcao"></div>
+    <div id="ngonngu"></div>
+  </div>
   <div id="debug"></div>
   <div style="background-color:yellow;"  id="footer">© <a href="https://hoclen.top">hoclen.top</a> , 2023</div>
  </body>
