@@ -82,6 +82,7 @@
 	      afterComplete: function(go) {
 			  stop+=4;
 			  setTimeout(goquangcao,1000);
+			  $("#noidung").find(".ti-cursor").hide();
 		  }
 		}).go();
 	 setTimeout(gobottom, 20000);
@@ -93,6 +94,7 @@
 		  cursorChar: "█",
 	      afterComplete: function(go) {
 			  gobottom();
+			  $("#bosung").find(".ti-cursor").hide();
 		  }
 		})
 		.type(qc)
