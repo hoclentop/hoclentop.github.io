@@ -8,15 +8,23 @@
       font-family: 'Courier New';
       font-size: 12pt;
       white-space: pre;
-      line-height: 120%;
+      line-height: 1.2;
     }
 	a:link { text-decoration: none; }
+	#header {
+		padding: 5px;
+	}
+	#footer {
+		padding: 10px;
+		margin-bottom: 50px;
+	}
   </style>
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script>
    var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
    var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
+   var ngonngu = "";
    var stop = 0;
    var bai= "";
    var nnlt="cpp";
@@ -38,7 +46,7 @@
 		  txt = data;
 		  
 		}).fail(function() {
-		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...");
+		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
 		  });
 	}
 	else {
@@ -46,17 +54,17 @@
 	}
 	
 	layquangcao();
-	$("#ngonngu").html("Xem bằng NNLT khác: ");
-	if (nnlt!="cpp") $("#ngonngu").append("<a href='?bai="+bai+"&nn=cpp'>C++</a> | ");
-	if (nnlt!="pas") $("#ngonngu").append("<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ");
-	if (nnlt!="py") $("#ngonngu").append("<a href='?bai="+bai+"&nn=py'>Python</a> | ");
+	ngonngu = "Xem bằng NNLT khác: ";
+	if (nnlt!="cpp") ngonngu+= "<a href='?bai="+bai+"&nn=cpp'>C++</a> | ";
+	if (nnlt!="pas") ngonngu+= "<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ";
+	if (nnlt!="py") ngonngu+= "<a href='?bai="+bai+"&nn=py'>Python</a> | ";
 	setTimeout(gocode, 5000);
    }
    function layquangcao() {
 	$.get( "qc/qccode.txt?v="+Math.random(), function(data) {
 	  var ds = data.split("\n");
 	  var c = randbetween(1, ds.length)-1;
-	  $("#quangcao").html(ds[c]);
+	  qc=ds[c];
 	});
 	   
    }
@@ -66,15 +74,31 @@
    function gocode() {
 	   
 	   $("#noidung").show();
-     new TypeIt(".typing", {
+     new TypeIt("#noidung", {
 		  //strings: data,
 		  //speed: 50,
 		  lifeLike: true,
 		  cursorChar: "█",
-	     	  afterComplete: function(go) {
-			  stop+=1;
+	      afterComplete: function(go) {
+			  stop+=4;
+			  setTimeout(goquangcao,1000);
 		  }
 		}).go();
+	 setTimeout(gobottom, 20000);
+   }
+   function goquangcao() {
+	   
+     new TypeIt("#bosung", {
+		  lifeLike: true,
+		  cursorChar: "█",
+	      afterComplete: function(go) {
+			  gobottom();
+		  }
+		})
+		.type(qc)
+		.break()
+		.type(ngonngu)
+		.go();
 	 setTimeout(gobottom, 20000);
    }
    function gobottom() {
@@ -85,11 +109,10 @@
   </script>
  </head>
  <body>
-  <div style="background-color:gray;" id="header">XEM MÃ NGUỒN</div>
+  <div style="background-color:rgb(145, 247, 179);" id="header">XEM MÃ NGUỒN</div>
   <div class="typing manguon" id="noidung"></div>
-  <div class="typing manguon">
-    <div id="quangcao"></div>
-    <div id="ngonngu"></div>
+  <div class="typing manguon" id="bosung">
+    
   </div>
   <div id="debug"></div>
   <div style="background-color:yellow;"  id="footer">© <a href="https://hoclen.top">hoclen.top</a> , 2023</div>
