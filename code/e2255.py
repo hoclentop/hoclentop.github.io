@@ -1,0 +1,6 @@
+s=input()
+p=input()
+if len(s)>len(p): print(s)
+elif len(s)<len(p): print(p)
+elif s>p: print(s)
+else: print(p)
