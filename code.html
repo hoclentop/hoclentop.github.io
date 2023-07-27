@@ -52,7 +52,7 @@
 		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
 		  });
 		var nver = ver+1;
-		if (fileExists(bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
+		if (fileExists("code/"+bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
 		nver=ver-1;
 		if (nver>=0)
 		 cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
