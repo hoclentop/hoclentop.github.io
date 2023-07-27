@@ -27,6 +27,8 @@
    var ngonngu = "";
    var stop = 0;
    var bai= "";
+   var cach="Cách làm khác ";
+   var ver=0;
    var nnlt="cpp";
    function chay() {
 	   $("#noidung").hide();
@@ -35,10 +37,11 @@
 	
 	if (urlParams.has("bai")) bai=urlParams.getAll('bai')[0];
 	if (urlParams.has("nn")) nnlt=urlParams.getAll('nn')[0];
+	if (urlParams.has("ver")) ver=parseInt(urlParams.getAll('ver')[0]);	   
 	//$("#debug").html(bai+"."+nnlt);
 	if (bai!="") {
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
-		$.get("code/"+bai+"."+nnlt+"?v="+Math.random(), function(data) {
+		$.get("code/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
 		  data = data.replaceAll("<", "&lt;");
 		  data = data.replaceAll(">", "&gt;");
 		  data = data.replace(/\t/g, '    ')
@@ -48,6 +51,11 @@
 		}).fail(function() {
 		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
 		  });
+		var nver = ver+1;
+		if (fileExists(bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
+		nver=ver-1;
+		if (nver>=0)
+		if (fileExists(bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
@@ -99,6 +107,8 @@
 		})
 		.type(qc)
 		.break()
+	     	.type(cach)
+	     	.break()
 		.type(ngonngu)
 		.go();
 	 setTimeout(gobottom, 20000);
@@ -107,6 +117,15 @@
      window.scrollTo(0, document.body.scrollHeight);
 	if (stop<3) setTimeout(gobottom, 1000);
    }
+   function fileExists (filename) {
+	var response = $.ajax({
+		url: filename,
+		type: 'HEAD',
+		async: false
+	}).status;	
+	
+	return (response != "200") ? false : true;
+}
    setTimeout(chay,2000);
   </script>
  </head>
