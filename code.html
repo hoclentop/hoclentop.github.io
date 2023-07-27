@@ -55,7 +55,7 @@
 		if (fileExists(bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
 		nver=ver-1;
 		if (nver>=0)
-		if (fileExists(bai+"_"+nver+"."+nnlt)) cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
+		 cach+="<a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>"+nver+"</a> |";
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
@@ -123,7 +123,7 @@
 		type: 'HEAD',
 		async: false
 	}).status;	
-	
+	console.log(response);
 	return (response != "200") ? false : true;
 }
    setTimeout(chay,2000);
