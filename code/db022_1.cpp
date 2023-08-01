@@ -2,8 +2,9 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    cout<<2023-n;
+    int a,b,t;
+    cin>>a>>b;
+    swap(a,b);
+    cout<<a<<" "<<b;
     return 0;
 }

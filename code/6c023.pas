@@ -1,8 +1,5 @@
-var a,b,t:integer;
+var n:integer;
 BEGIN
-    readln(a,b);
-    t:=a;
-    a:=b;
-    b:=t;
-    write(a,' ',b);
+    readln(n);
+    write(2023-n);
 END.
