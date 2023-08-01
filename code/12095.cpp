@@ -5,16 +5,19 @@ int main()
 {
     string s;
     getline(cin,s);
-    int dmax=0, d=0;
-    for (int i=0;i<s.length(); i++) {
-        if (s[i]==' ') {
-            d=0;
+    int dmax=0, d=0, v;
+    for (int c=0;c<s.length(); c++) {
+        if (s[c]!=' ') {
+            d++;
+            if (d>dmax) {
+                dmax=d;
+                v=c-d+1;
+            }
         }
         else {
-            d++;
-            if (d>dmax) dmax=d;
+            d=0;
         }
     }
-    cout<<dmax;
+    cout<<s.substr(v,dmax);
     return 0;
 }
