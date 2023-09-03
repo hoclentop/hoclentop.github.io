@@ -52,10 +52,10 @@
 		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
 		  });
 		var nver = ver+1;
-		if (fileExists("mau/"+bai+"_"+nver+"."+nnlt)) cach+=" <a href='mau.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		if (fileExists("mau/"+bai+"_"+nver+"."+nnlt)) cach+=" <a href='?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
 		nver=ver-1;
 		if (nver>=0)
-		 cach+=" <a href='mau.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		 cach+=" <a href='?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
