@@ -1,5 +1,5 @@
-var n,m,k,x,i : integer;
-    a, b : array[1..50] of integer;
+var n,m,k,x,i : longint;
+    a, b : array[1..5000] of longint;
     t : integer;
 BEGIN
     assign(input,'bai2.inp'); reset(input);
