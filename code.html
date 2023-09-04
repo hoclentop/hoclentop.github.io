@@ -41,7 +41,7 @@
 	if (urlParams.has("ver")) ver=parseInt(urlParams.getAll('ver')[0]);	   
 	//$("#debug").html(bai+"."+nnlt);
 	if (bai!="") {
-		if (in_array(bai, chuyendi)) window.location = "mau.html?bai=" + bai +"&nn="+nnlt;
+		if (chuyendi.includes(bai)) window.location = "mau.html?bai=" + bai +"&nn="+nnlt;
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
 		$.get("code/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
 		  data = data.replaceAll("<", "&lt;");
