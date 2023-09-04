@@ -1,0 +1,44 @@
+
+<html>
+<head>
+	<script	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#giong").click(dien);
+            $("#tentep").k
+
+            function dien() {
+                $(".thieu").html($("#tentep").val());
+            }
+            $(document).keypress(function(e) {
+                if(e.which == 13) {
+                    dien();
+                }
+            });
+		});
+	</script>
+	<style>
+		#ketqua {
+			font-family:"Courier New", Arial;
+			word-wrap: break-word;
+			
+		}
+	</style>
+</head>
+<body>
+	<h3>ĐỌC GHI TỆP - THNam</h3>
+	<p>Tên tệp: <input id="tentep"> <button id="giong">Sinh</button></p>
+
+	
+	<div id="ketqua">
+    <h3>C++</h3>
+    <p>freopen("<span class="thieu"></span>.inp","r",stdin);freopen("<span class="thieu"></span>.out","w",stdout);</p>
+    <h3>Python</h3>
+    <p>import sys<br>sys.stdin = open("<span class="thieu"></span>.inp","r")<br>sys.stdout = open("<span class="thieu"></span>.out","w")</p>
+    <h3>Pascal</h3>
+    <p>assign(input,'<span class="thieu"></span>.inp'); reset(input);<br>assign(output,'<span class="thieu"></span>.out'); rewrite(output);</p>
+    
+    </div>
+</body>
+
+</html>
