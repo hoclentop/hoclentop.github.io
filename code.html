@@ -29,7 +29,7 @@
    var bai= "";
    var cach="Cách làm khác ";
    var ver=0;
-   var nnlt="cpp";
+   var nnlt="";
 	  var chuyendi = ["b221f1", "b221f2", "b221f3", "b221f4", "b221f5", "b221f5", "b22142", "b221e4", "b22104", "b22174", "b22164", "b221d4", "66285","57283","d1282","c1280","41279","58278","58269","34277","88276","2c275","20274","53273","43272","a1271","a1270"];
    function chay() {
 	   $("#noidung").hide();
@@ -41,6 +41,10 @@
 	if (urlParams.has("ver")) ver=parseInt(urlParams.getAll('ver')[0]);	   
 	//$("#debug").html(bai+"."+nnlt);
 	if (bai!="") {
+		if (nnlt=="") {
+			nnlt = "cpp";
+			if (bai.substr(0,4)=="b221") nnlt="pas";
+		}
 		if (chuyendi.includes(bai)) window.location = "mau.html?bai=" + bai +"&nn="+nnlt;
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
 		$.get("code/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
