@@ -17,5 +17,5 @@ T = [2, 4, 6, 10, 12, 16, 18, 22, 28, 30, 36]
 for y in T:
     b = int(pow(r, 1/y))
     a = int(pow(l-1, 1/y))
-    dem +=   p[b] – p[a]
+    dem +=   p[b] - p[a]
 print(dem)
