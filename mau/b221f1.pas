@@ -5,6 +5,8 @@ var l, r : int64;
     T : array[1..11] of integer = (2, 4, 6, 10, 12, 16, 18, 22, 28, 30, 36);
     dem : longint;
 BEGIN
+    assign(input,'cau1b.inp'); reset(input); 
+    assign(output,'cau1b.out'); rewrite(output);
     readln(l, r);
     filldword(p, 1000001, 1);
     p[0]:= 0;
@@ -19,7 +21,6 @@ BEGIN
         b:=trunc(power(r, 1.0/y));
         a:=trunc(power(l-1,1.0/y));
         dem+=p[b]-p[a];
-        writeln(y, ' ', a,' ', b, ' ', dem);
     end;
     write(dem);
 END.
