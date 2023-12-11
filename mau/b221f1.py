@@ -7,7 +7,7 @@ g = int(sqrt(r))
 p = [1] * (g+1)
 p[0] = p[1] = 0
 for x in range(2, int(sqrt(g))+1):
-    for y in range(x, g//x):
+    for y in range(x, g//x+1):
         p[x*y] = 0
  
 for i in range(1, g+1):
