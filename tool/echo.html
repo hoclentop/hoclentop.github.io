@@ -1,0 +1,34 @@
+<html>
+    <meta charset="UTF-8">
+<head>
+	<script	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#giong").click(dien);
+
+            function dien() {
+                $("#ketqua").html("echo "+$("#noidung").val().replace(/(?:\r\n|\r|\n)/g, ' &gt;&gt; '+$("#tentep").val()+' <br>echo ')+' &gt;&gt; '+$("#tentep").val());
+            }
+            
+		});
+	</script>
+	<style>
+		#ketqua {
+			font-family:"Courier New", Arial;
+			word-wrap: break-word;
+			
+		}
+	</style>
+</head>
+<body>
+	<h3>echo to inp</h3>
+	<p>Tên tệp: <input id="tentep" value="test01.inp"> <button id="giong">Sinh</button></p>
+	<p><textarea id="noidung" rows="8" cols="30"></textarea>
+	<p>
+	<div id="ketqua">
+    
+    
+    </div>
+</body>
+
+</html>
