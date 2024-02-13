@@ -7,7 +7,7 @@
 			$("#giong").click(dien);
 
             function dien() {
-                $("#ketqua").html("echo "+$("#noidung").val().replace(/(?:\r\n|\r|\n)/g, ' &gt;&gt; '+$("#tentep").val()+' <br>echo ')+' &gt;&gt; '+$("#tentep").val());
+                $("#ketqua").html("echo "+$("#noidung").val().replace(/(?:\r\n|\r|\n)/g, ' &gt;&gt; '+$("#tentep").val()+' <br>echo ').replace(" &gt;&gt; "," &gt; ")+' &gt;&gt; '+$("#tentep").val());
             }
             
 		});
