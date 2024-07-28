@@ -19,3 +19,5 @@ Nếu x là ước của n thì x = 1..n. Hai số đầu và cuối hiển nhi�
 * Với mỗi x chạy từ 2 đến n-1:
   * Nếu n ⋮ x thì viết NO và kết thúc thuật toán;
 * Viết YES;
+
+Ta có giảm giới hạn của x xuống $[\frac{n}{2}]$ hoặc $[\sqrt{n}]$.
