@@ -1,0 +1,142 @@
+<html>
+ <head>
+  <meta charset="utf8"/>
+  <meta name="author" content="Tran Huu Nam">
+	 <meta http-equiv="refresh" content="300">
+  <style>
+    .manguon {
+      font-family: 'Courier New';
+      font-size: 13pt;
+      white-space: pre;
+      line-height: 1.2;
+    }
+	a:link { text-decoration: none; }
+	#header {
+		padding: 5px;
+	}
+	#footer {
+		padding: 10px;
+		margin-bottom: 50px;
+	}
+  </style>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+   var txt = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
+   var qc = "Trần Hữu Nam - https://thptccva.edu.vn/gv/thnam";
+   var ngonngu = "";
+   var stop = 0;
+   var bai= "";
+   var cach="Cách làm khác ";
+   var ver=0;
+   var nnlt="";
+	 function chay() {
+	   $("#noidung").hide();
+    var queryString = window.location.search;
+	var urlParams = new URLSearchParams(queryString);
+	
+	if (urlParams.has("bai")) bai=urlParams.getAll('bai')[0];
+	if (urlParams.has("nn")) nnlt=urlParams.getAll('nn')[0];
+	if (urlParams.has("ver")) ver=parseInt(urlParams.getAll('ver')[0]);	   
+	//$("#debug").html(bai+"."+nnlt);
+	if (bai!="") {
+		if (nnlt=="") {
+			nnlt = "cpp";
+		}
+		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
+		$.get("de33/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
+		  data = data.replaceAll("<", "&lt;");
+		  data = data.replaceAll(">", "&gt;");
+		  data = data.replace(/\t/g, '    ')
+		  $("#noidung").html(data);
+		  txt = data;
+		  
+		}).fail(function() {
+		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
+		  });
+		var nver = ver+1;
+		if (fileExists("code/"+bai+"_"+nver+"."+nnlt)) cach+=" <a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		nver=ver-1;
+		if (nver>=0)
+		 cach+=" <a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+	}
+	else {
+		$("#debug").html("Không tìm thấy mã nguồn");
+	}
+	
+	layquangcao();
+	ngonngu = "Xem bằng NNLT khác: ";
+	if (nnlt!="cpp") ngonngu+= "<a href='?bai="+bai+"&nn=cpp'>C++</a> | ";
+	if (nnlt!="pas") ngonngu+= "<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ";
+	if (nnlt!="py") ngonngu+= "<a href='?bai="+bai+"&nn=py'>Python</a> | ";
+	setTimeout(gocode, 5000);
+   }
+   function layquangcao() {
+	$.get( "qc/qccode.txt?v="+Math.random(), function(data) {
+	  var ds = data.split("\n");
+	  var c = randbetween(1, ds.length)-1;
+	  qc=ds[c];
+	});
+	   
+   }
+   function randbetween(a, b) {
+     return Math.floor(Math.random() * (b-a+1))+a;
+   }
+   function gocode() {
+	   
+	   $("#noidung").show();
+     new TypeIt("#noidung", {
+		  //strings: data,
+		  //speed: 50,
+		  lifeLike: true,
+		  cursorChar: "█",
+	      afterComplete: function(go) {
+			  stop+=4;
+			  setTimeout(goquangcao,1000);
+			  go.destroy();
+		  }
+		}).go();
+	 setTimeout(gobottom, 20000);
+   }
+   function goquangcao() {
+	   
+     new TypeIt("#bosung", {
+		  lifeLike: true,
+		  cursorChar: "█",
+	      afterComplete: function(go) {
+			  gobottom();
+			  go.destroy();
+		  }
+		})
+		.type(qc)
+		.break()
+	     	.type(cach)
+	     	.break()
+		.type(ngonngu)
+		.go();
+	 setTimeout(gobottom, 20000);
+   }
+   function gobottom() {
+     window.scrollTo(0, document.body.scrollHeight);
+	if (stop<3) setTimeout(gobottom, 1000);
+   }
+   function fileExists (filename) {
+	var response = $.ajax({
+		url: filename,
+		type: 'HEAD',
+		async: false
+	}).status;	
+	//console.log(filename+":"+response);
+	return (response != "200") ? false : true;
+}
+   setTimeout(chay,2000);
+  </script>
+ </head>
+ <body>
+  <div style="background-color:rgb(145, 247, 179);" id="header">XEM MÃ NGUỒN</div>
+  <div class="typing manguon" id="noidung"></div>
+  <div class="typing manguon" id="bosung"></div>
+  <div id="debug"></div>
+  <div style="background-color:yellow;"  id="footer">© <a href="https://hsgtin.vn">hsgtin.vn</a> , 2024</div>
+ </body>
+</html> 
