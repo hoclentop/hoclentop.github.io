@@ -1,8 +1,8 @@
-Các khóa học thuật toán: <a href="https://hsgtin.vn/hsg.html">hsgtin.vn</a>
-Sách học ôn thi HSG <a href="https://hsgtin.vn/sach">hsgtin.vn/sach</a>
-Sách BDHSG <a href="https://hsgtin.vn/sach/">hsgtin.vn/sach</a>
-Tuyển chọn các bài code thiếu nhi <a href="https://hsgtin.vn/sach/code1.html">Xem</a>
-Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 1 <a href="https://hsgtin.vn/sach/de21.html">Xem</a>
-Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 2 <a href="https://hsgtin.vn/sach/de22.html">Xem</a>
-Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 3 <a href="https://hsgtin.vn/sach/de33.html">Xem</a>
-Chuyên đề Quy hoạch chữ số <a href="https://hsgtin.vn/tai-lieu/chuyen-de-quy-hoach-dong-chu-so/">Xem</a>
+<a href="https://hsgtin.vn/hsg.html">Các khóa học thuật toán, ôn thi HSG Tin học</a>
+<a href="https://hsgtin.vn/sach">Sách học ôn thi HSG</a>
+<a href="https://hsgtin.vn/sach/code1.html">Tuyển chọn các bài code thiếu nhi</a>
+<a href="https://hsgtin.vn/sach/de21.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 1</a>
+<a href="https://hsgtin.vn/sach/de22.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 2 </a>
+<a href="https://hsgtin.vn/sach/de33.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 3</a>
+<a href="https://hsgtin.vn/tai-lieu/chuyen-de-quy-hoach-dong-chu-so/">Chuyên đề Quy hoạch chữ số</a>
+<a href="https://hsgtin.vn/">Tài liệu BDHSG, ôn thi HSG Tin học</a>
