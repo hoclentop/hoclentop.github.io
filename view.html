@@ -44,7 +44,7 @@
 			nnlt = "cpp";
 		}
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
-		$.get("de33/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
+		$.get("sach/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
 		  data = data.replaceAll("<", "&lt;");
 		  data = data.replaceAll(">", "&gt;");
 		  data = data.replace(/\t/g, '    ')
