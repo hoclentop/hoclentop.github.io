@@ -1,3 +1,4 @@
+//DE3325.CPP - Tran Huu Nam - hsgtin.vn - 2024
 #include <bits/stdc++.h>
 using namespace std;
 const int maxn = 1 + 2e5;
@@ -6,10 +7,10 @@ vector<int > g[maxn], query;
 vector<int > res;
 vector<multiset<int > > s;
 void dfs(int u, int p) {
-    for (int v: g[u]) 
+    for (int v: g[u])
       if (v != p) {
         dfs(v,u);
-        //if (s[u].size() < s[v].size()) swap(s[u],s[v]);
+        if (s[u].size() < s[v].size()) swap(s[u],s[v]);
         for (int x: s[v]) s[u].insert(x);
     }
     multiset<int >::iterator L = s[u].lower_bound(a[u]);
@@ -35,3 +36,4 @@ int main() {
     for (int u: query) cout << res[u] << '\n';
     return 0;
 }
+
