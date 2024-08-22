@@ -1,4 +1,4 @@
-, b = [int(x) for x in input().split()]
+a, b = [int(x) for x in input().split()]
 def UCLN(x, y):
   while x != y:
     if x > y :
