@@ -1,21 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int N = 1e6 + 1;
-long long a[N];
 signed main(){
      ios::sync_with_stdio(0); cin.tie(0);
      int n, q, p, l, r, x; 
      cin >> n >> q;
+     vector<long long> a(n+1);
      for(int i = 1; i <= n; i++){
           cin >> a[i];
      }
      for(int i = 1; i <= q; i++){
           cin >> p;
           if(p == 1){
-               cin >> l;
+               cin >> x;
+               a.erase(a.begin()+x);
           }
           if(p == 2){
-               cin >> l >> r >> x;;
+               cin >> l >> r >> x;
                for(int j = l; j <= r; j++){
                     a[j] += x;
                }
