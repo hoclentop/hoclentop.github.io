@@ -10,7 +10,7 @@ int main()  {
         if (mx<a[i]) mx=a[i];
     }
     for (x=2; x<=mx; x++) b[x]=x;
-    for (x=2; x<=mx; x++)
+    for (x=2; x*x<=mx; x++)
         for (y=x*x; y<=mx; y+=x)
             b[y]=min(b[y], x);
     for (i=1; i<=n; i++) {
