@@ -14,7 +14,10 @@ int main() {
     for (i=0; i<s.length(); i++)
         c[s[i]]++;
     for (i=0; i<s.length(); i++)
-        if (c[s[i]]<=n) cout<<s[i];
+        if (c[s[i]]<=n) {
+            cout<<s[i];
+            c[s[i]]=n+1;
+        }
     return 0;
 }
 
