@@ -3,7 +3,8 @@
 #define N 300000
 #define ll long long
 using namespace std;
-int n,kq;
+int n;
+long long kq;
 int lw[N+1], up[N+1], nu[N+1];
 bool check(int t,int k){
     return up[k]-up[t]>0 && lw[k]-lw[t]>0 && nu[k]-nu[t]>0;
