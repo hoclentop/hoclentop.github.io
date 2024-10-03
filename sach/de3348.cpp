@@ -7,11 +7,13 @@ int diem(int i, int j) {
     if (S%2==1) return 0;
     int k= lower_bound(a+i, a+j, a[i-1]+S/2)-a;
     if (k>=j) return 0;
-    return kq = 1+max(diem(i,k), diem(k+1,j));
+    return 1+max(diem(i,k), diem(k+1,j));
 }
-int main() {
+int main() 
+{
     int T;
-    cin>>T; a[0]=0;
+    cin>>T;
+    a[0]=0;
     while (T--) {
         cin>>n;
         for (int i=1; i<=n; i++) {
@@ -20,5 +22,6 @@ int main() {
         }
         cout<<diem(1,n)<<endl;
     }
+    return 0;
 }
 
