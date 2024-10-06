@@ -1,4 +1,4 @@
-//DE3348.PY - Tran Huu Nam - hsgtin.vn - 2024
+#DE3348.PY - Tran Huu Nam - hsgtin.vn - 2024
 import bisect
 def diem(i, j):
     S = a[j] - a[i-1]
@@ -7,6 +7,7 @@ def diem(i, j):
     k = bisect.bisect_left(a[i:j], a[i-1] + S // 2) + i
     if k >= j:
         return 0
+    if a[k]!=a[i-1]+S//2: return 0
     return 1 + max(diem(i, k), diem(k + 1, j))
 def main():
     import sys
