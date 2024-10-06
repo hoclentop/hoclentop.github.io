@@ -7,6 +7,7 @@ int diem(int i, int j) {
     if (S%2==1) return 0;
     int k= lower_bound(a+i, a+j, a[i-1]+S/2)-a;
     if (k>=j) return 0;
+    if (a[k]!=a[i-1]+S/2) return 0;
     return 1+max(diem(i,k), diem(k+1,j));
 }
 int main() 
