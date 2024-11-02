@@ -12,7 +12,7 @@ int main() {
     string q(t,'0');
     p=p+q;  s=q+s;  q=p;
     for (int i=t+n-1; i>=0; i--) {
-        a=s[i]+nho+p[i];
+        a=s[i]+nho+p[i]-96;
         q[i]=a%2+48;
         nho=a/2;
     }
