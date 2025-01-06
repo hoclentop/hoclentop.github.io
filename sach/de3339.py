@@ -1,4 +1,4 @@
-//DE3339.PY - Tran Huu Nam - hsgtin.vn - 2024
+#DE3339.PY - Tran Huu Nam - hsgtin.vn - 2024
 import sys
 from bisect import bisect_left
 input = sys.stdin.read
