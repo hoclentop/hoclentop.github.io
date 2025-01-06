@@ -20,6 +20,7 @@ for i in range(t):
 a.sort()
 for i in range(1, n + 1):
     b[i] = b[i - 1] + a[i] - a[i - 1] - 1
+    if a[i]==a[i-1]: b[i]+=1
 for i in range(t):
     if res[i] > b[n]:
         print(a[n] + res[i] - b[n])
