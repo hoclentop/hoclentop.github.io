@@ -27,6 +27,7 @@ def main():
     if not d[s]:
         print(-1)
         return
+    a.sort()
     for i in range(n, 0, -1):
         if s >= a[i] and d[s - a[i]]:
             c.append(a[i])
