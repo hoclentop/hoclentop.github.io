@@ -19,6 +19,7 @@ int main() {
         cout<<-1;
         return 0;
     }
+    sort(a+1, a+n+1);
     for (int i=n; i>=1; i--)
         if (s>=a[i] && d[s-a[i]]) {
             c.push_back(a[i]);
