@@ -27,7 +27,7 @@ int main() {
       cin>>s;
       if (t<=s) {
         cout<<t<<" "<<0<<endl;
-        return 0;
+        continue;
       }
       fill(D, D+s+1, 1000);
       D[0]=0;
