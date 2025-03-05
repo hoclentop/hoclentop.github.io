@@ -28,7 +28,7 @@ def main():
         s = int(input().strip())
         if t <= s:
             print(t, 0)
-            return
+            continue
         D[0] = 0
         t = 0
         for i in range(1, n + 1):
