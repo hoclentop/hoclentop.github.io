@@ -1,8 +1,8 @@
-<a href="https://hsgtin.vn/hsg.html">Các khóa học thuật toán, ôn thi HSG Tin học</a>
-<a href="https://hsgtin.vn/sach">Sách học ôn thi HSG</a>
-<a href="https://hsgtin.vn/sach/code1.html">Tuyển chọn các bài code thiếu nhi</a>
-<a href="https://hsgtin.vn/sach/de21.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 1</a> <br><img src="https://hsgtin.vn/sach/img/s2bia3.png">
-<a href="https://hsgtin.vn/sach/de22.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 2 </a>
-<a href="https://hsgtin.vn/sach/de33.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 3</a>
+<a href="https://hsgtin.vn/hsg.html">Các khóa học thuật toán, ôn thi HSG Tin học, thi vào 10, THT</a>
+<a href="https://hsgtin.vn/sach">Sách học ôn thi HSG</a> <br><img src="https://hsgtin.vn/sach/img/4sach-ngang.png" width="300px">
+<a href="https://hsgtin.vn/sach/code1.html">Tuyển chọn các bài code thiếu nhi</a><br><img src="https://hsgtin.vn/sach/img/s1bia3.png" width="300px">
+<a href="https://hsgtin.vn/sach/de21.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 1</a> <br><img src="https://hsgtin.vn/sach/img/s2bia3.png" width="300px">
+<a href="https://hsgtin.vn/sach/de22.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 2 </a> <br><img src="https://hsgtin.vn/sach/img/s3bia4.png" width="300px">
+<a href="https://hsgtin.vn/sach/de33.html">Tuyển tập đề thi HSG cấp tỉnh Tin học Quyển 3</a> <br><img src="https://hsgtin.vn/sach/img/s4bia3.png" width="300px">
 <a href="https://hsgtin.vn/tai-lieu/chuyen-de-quy-hoach-dong-chu-so/">Chuyên đề Quy hoạch chữ số</a>
 <a href="https://hsgtin.vn/">Tài liệu BDHSG, ôn thi HSG Tin học</a>
