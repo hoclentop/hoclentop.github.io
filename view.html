@@ -28,7 +28,7 @@
    var stop = 0;
    var bai= "";
    var thumuc="sach";
-   var cach="Cách làm khác ";
+   var cach="";
    var ver=0;
    var nnlt="";
 	 function chay() {
@@ -61,16 +61,18 @@
 		nver=ver-1;
 		if (nver>=0)
 		 cach+=" <a href='view.html?bai="+bai+"&muc="+thumuc+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		if (cach.length>10) cach="Cách làm khác: " + cach;
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
 	}
 	
 	layquangcao();
-	ngonngu = "Xem bằng NNLT khác: ";
-	if (nnlt!="cpp") ngonngu+= "<a href='?bai="+bai+"&nn=cpp'>C++</a> | ";
-	if (nnlt!="pas") ngonngu+= "<a href='?bai="+bai+"&nn=pas'>Pascal</a> | ";
-	if (nnlt!="py") ngonngu+= "<a href='?bai="+bai+"&nn=py'>Python</a> | ";
+	ngonngu = "";
+	if (nnlt!="cpp" && fileExists(thumuc+"/"+bai+".cpp")) ngonngu+= "<a href='?bai="+bai+"&muc="+thumuc+"&nn=cpp'>C++</a> | ";
+	if (nnlt!="pas" && fileExists(thumuc+"/"+bai+".pas")) ngonngu+= "<a href='?bai="+bai+"&muc="+thumuc+"&nn=pas'>Pascal</a> | ";
+	if (nnlt!="py" && fileExists(thumuc+"/"+bai+".py")) ngonngu+= "<a href='?bai="+bai+"&muc="+thumuc+"&nn=py'>Python</a> | ";
+	if (ngonngu.length>10) ngonngu = "Xem bằng NNLT khác: " + ngonngu;
 	setTimeout(gocode, 5000);
    }
    function layquangcao() {
