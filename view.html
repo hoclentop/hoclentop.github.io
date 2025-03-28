@@ -2,7 +2,7 @@
  <head>
   <meta charset="utf8"/>
   <meta name="author" content="Tran Huu Nam">
-	 <meta http-equiv="refresh" content="300">
+	 <meta http-equiv="refresh" content="600">
   <style>
     .manguon {
       font-family: 'Courier New';
@@ -27,6 +27,7 @@
    var ngonngu = "";
    var stop = 0;
    var bai= "";
+   var thumuc="sach";
    var cach="Cách làm khác ";
    var ver=0;
    var nnlt="";
@@ -37,6 +38,7 @@
 	
 	if (urlParams.has("bai")) bai=urlParams.getAll('bai')[0];
 	if (urlParams.has("nn")) nnlt=urlParams.getAll('nn')[0];
+	if (urlParams.has("muc")) thumuc=urlParams.getAll('muc')[0];
 	if (urlParams.has("ver")) ver=parseInt(urlParams.getAll('ver')[0]);	   
 	//$("#debug").html(bai+"."+nnlt);
 	if (bai!="") {
@@ -44,7 +46,7 @@
 			nnlt = "cpp";
 		}
 		$("#header").append(" BÀI: "+bai.toUpperCase() + " - NNLT: "+nnlt.toUpperCase());
-		$.get("sach/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
+		$.get(thumuc+"/"+bai+(ver==0?"":"_"+ver)+"."+nnlt+"?v="+Math.random(), function(data) {
 		  data = data.replaceAll("<", "&lt;");
 		  data = data.replaceAll(">", "&gt;");
 		  data = data.replace(/\t/g, '    ')
@@ -55,10 +57,10 @@
 		    $("#noidung").html("Mã nguồn "+nnlt+" đang được cập nhật...<br>");
 		  });
 		var nver = ver+1;
-		if (fileExists("code/"+bai+"_"+nver+"."+nnlt)) cach+=" <a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		if (fileExists(thumuc+"/"+bai+"_"+nver+"."+nnlt)) cach+=" <a href='view.html?bai="+bai+"&muc="+thumuc+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
 		nver=ver-1;
 		if (nver>=0)
-		 cach+=" <a href='code.html?bai="+bai+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
+		 cach+=" <a href='view.html?bai="+bai+"&muc="+thumuc+"&nn="+nnlt+"&ver="+nver+"'>["+nver+"]</a> |";
 	}
 	else {
 		$("#debug").html("Không tìm thấy mã nguồn");
@@ -137,6 +139,6 @@
   <div class="typing manguon" id="noidung"></div>
   <div class="typing manguon" id="bosung"></div>
   <div id="debug"></div>
-  <div style="background-color:yellow;"  id="footer">© <a href="https://hsgtin.vn">hsgtin.vn</a> , 2024</div>
+  <div style="background-color:yellow;"  id="footer">© <a href="https://hsgtin.vn">hsgtin.vn</a> , 2025</div>
  </body>
 </html> 
